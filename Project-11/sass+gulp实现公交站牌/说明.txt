@@ -1,0 +1,1 @@
+先安装并配置ruby环境，再install npm安装插件，最后执行gulp

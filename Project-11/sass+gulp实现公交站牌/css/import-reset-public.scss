@@ -1,0 +1,49 @@
+// 重置样式和公共样式
+html,body,div,aside,nav,footer,section,p,h2,h3,h4,ul,li{
+    margin:0;
+    padding:0;
+    border:0 none;
+    box-sizing:border-box;
+    font:{
+        family:"Microsoft Yahei";
+        weight:400;
+    }
+}
+ul,li{
+    list-style:none outside none;
+}
+html,body{
+    height:100%;                                            
+}
+body{
+    background:url(../images/bg-cloud.jpg) no-repeat 0 0;
+    animation:move 30s linear 0s infinite;                  // 动态背景
+    @at-root{
+        @keyframes move{
+            from{ background-position:0 0; }
+            to{ background-position:100% 30%; }
+        }
+    }
+}
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+.clearfix:before, .clearfix:after{                         //清除浮动
+    content:'';
+    display:block;
+    visibility:hidden;
+    overflow:hidden;
+    width:0;
+    height:0;
+    font-size:0;
+    line-height:0;
+}
+.clearfix:after{
+    clear:both;
+}
+.clearfix{
+    zoom:1;
+}

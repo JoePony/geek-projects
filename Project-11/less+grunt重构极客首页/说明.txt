@@ -1,0 +1,2 @@
+执行 npm insatll 安装一下(package.json中有相关的依赖配置)，抱歉！
+然后执行grunt即可自动执行less转css、压缩、实时监测等操作，执行后访问index.html即可

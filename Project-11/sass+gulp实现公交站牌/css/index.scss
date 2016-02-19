@@ -1,0 +1,146 @@
+//主样式
+@import "import-reset-public","import-mixin"; //引入重置样式scss、mixin样式scss
+//站牌外部样式
+.wrapper{
+    margin:10% auto 0;
+    @include col-sm;                           // 站牌自适应宽度
+    height:inherit;
+    transition:all .5s ease;
+    @at-root .board{                           //站牌样式
+        @include bg-c(#FDFDFD);
+        padding:10px 10px;
+        border-radius:10px;
+        @include pos-r;
+        @include z(9);        
+    }
+    @include pos-r;
+    .pole{                                     //站牌杆样式
+        $w:40px;
+        width:$w;
+        height:inherit;
+        @include bg-c(#FDFDFD);
+        background:-webkit-linear-gradient(left, #EFEFEF,#FFF,#EFEFEF);
+        background:-moz-linear-gradient(left, #EFEFEF,#FFF,#EFEFEF);
+        background:-ms-linear-gradient(left, #EFEFEF,#FFF,#EFEFEF);
+        background:linear-gradient(left, #EFEFEF,#FFF,#EFEFEF);
+        @include pos-a;
+        top:0;
+        left:50%;
+        margin-left: -($w/2);                  //相对主体居中
+        @include z(1);
+    }
+}
+//顶部样式
+header{                        
+    @include pos-r;
+    @at-root aside{                            //线路名
+        width:20%;
+        @include bg-c(#F00);
+        color:#FFF;
+        text-align:center;
+        @include pos-a;
+        top:50%;
+        left:0;
+        transform:translateY(-50%);
+        border-radius:3px 10px 3px 10px;
+        & > *{
+            padding:10px 20px;
+        }
+    }
+    @at-root section{
+        width:70%;
+        .now-stop, .next-stop{                         //本站、下一站
+            @include ta-c;
+            font-size:22px;
+        }
+        .next-stop{
+            font-size:18px;
+        }
+        .from-to{                                     //线路起始点
+            display:flex;
+            & > *{
+                flex:1;
+            }
+            $h:30px;
+            line-height:$h;
+            $border-c:#F00;
+            @include pos-r;
+            span{                                      //起点、终点
+                @include ta-c;
+                @include dis-ib;
+                padding:0 2%;
+                letter-spacing:1px;
+            }
+            p{                                         //起点、终点间横线
+                flex:3;
+                border-top:1px solid $border-c;
+                @include pos-r;
+                top:$h / 2;
+                &:after{                               //起点、终点间箭头
+                    content:"";
+                    display:inline-block;
+                    $triangle-w:9px;
+                    @include triangle($d:right, $w:$triangle-w, $c:$border-c);  //箭头
+                    @include pos-a;
+                    top:0;
+                    margin-top: -($triangle-w/2);
+                    right:-($triangle-w);
+                }
+            }
+        }
+    }
+}
+//线路
+nav{
+    $bg-c:#5EF90F;
+    background-color:$bg-c;
+    margin-top:20px;
+    @at-root .line-list{
+        display:flex;
+        li{ 
+            flex:1;                                             //各站点等宽
+            @include ta-c;
+            vertical-align:top;
+            padding:7px 0 10px;
+            @include cursor(pointer);
+            transition:all .1s linear;
+            background-color:transparent;
+            &:hover, &.curr{                                    //当前、hover站点样式
+                background-color:$bg-c - 50;
+                span{
+                    color:#FFF;
+                } 
+            }
+        }
+        span{                                                   //站名
+            font-size:14px;
+            width:14px;
+            display:inline-block;
+            margin:0 auto;
+            @include cursor(pointer);
+            transition:all .1s linear;
+        }
+    }
+}
+//底部信息
+footer{
+    margin:20px 0 10px;
+    padding:0 5px 0 0;
+    font-size:13px;
+    .arrow{                                                   //底部箭头
+        $border-c:#F00;
+        border-bottom:2px solid $border-c;
+        margin:3px 0;
+        @include pos-r;
+        &:after{
+            content:"";
+            display:inline-block;
+            $triangle-w:20px;
+            @include triangle-half($d:right, $w:$triangle-w, $c:$border-c);  //箭头
+            @include pos-a;
+            top:0;
+            margin-top: -($triangle-w/2);                       //垂直居中
+            right:0;
+        }
+    }
+}

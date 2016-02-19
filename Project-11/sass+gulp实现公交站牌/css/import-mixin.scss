@@ -1,0 +1,70 @@
+//minxin模块
+@mixin cursor($type:default){
+    cursor:$type;
+}
+@mixin col-sm($w:50%){
+    @media only screen and (min-width:768px){  // 站牌宽度响应式
+        width:$w;
+    }
+}
+@mixin ta-c{
+    text-align:center;
+}
+@mixin dis-ib{
+    display:inline-block;
+}
+@mixin pos-r{
+    position:relative;
+}
+@mixin pos-a{
+    position:absolute;
+}
+@mixin bg-c($c){
+    background-color:$c;
+}
+@mixin z($z){
+    z-index:$z;
+}
+@mixin width-height-0{
+    width:0;
+    height:0;
+}
+.height-light{
+    color:#F00;
+    font-weight:700;
+}
+@mixin triangle($d:bottom,$w:5px,$c:#333){              //向下的三角图标
+    border-width:$w;
+    border-color:$c transparent transparent;
+    border-style:solid dashed dashed;
+    border-bottom:none;
+    @include width-height-0;
+}
+@mixin triangle($d:left,$w:5px,$c:#333){                 //向左的三角图标
+    border-width:$w;
+    border-color:transparent $c transparent transparent;
+    border-style:dashed solid dashed dashed;
+    border-left:none;
+    @include width-height-0;
+}
+@mixin triangle($d:top,$w:5px,$c:#333){                  //向上的三角图标
+    border-width:$w;
+    border-color:transparent transparent $c transparent;
+    border-style:dashed dashed solid dashed;
+    border-top:none;
+    @include width-height-0;
+}
+@mixin triangle($d:right,$w:5px,$c:#333){                //向右的三角图标
+    border-width:$w/2 $w/2 $w/2 $w;
+    border-color:transparent transparent transparent $c;
+    border-style:dashed dashed dashed solid;
+    border-right:none;
+    @include width-height-0;
+}
+@mixin triangle-half($d:right,$w:5px,$c:#333){                //向右的一半宽度三角图标
+    border-width:$w/2 $w/2 0 $w;
+    border-color:transparent transparent transparent $c;
+    border-style:dashed dashed dashed solid;
+    border-right:none;
+    @include width-height-0;
+}
