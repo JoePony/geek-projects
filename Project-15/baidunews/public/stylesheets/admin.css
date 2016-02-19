@@ -1,0 +1,155 @@
+/* 
+  后台样式
+*/
+
+/* 重置bootstrap样式、及公共样式 */
+ul,li,aside{
+    margin:0;
+    padding:0;
+}
+html,body{
+    font-family:"Microsoft Yahei" !important;
+    height:100%;
+}
+input:focus{
+    outline:0 none !important;
+}
+label{
+    font-weight:normal !important;
+}
+ul,li{
+    list-style:none outside none;
+}
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+/* 登录样式 */
+.login{
+    position:relative;
+    width:100% !important;
+    height:inherit;
+    background-color:#F0F0F0;
+}
+.login .wrap{
+    background-color:#FFF;
+    padding:10px 20px 5px;
+    min-width:200px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    -webkit-transform:translate(-50%, -70%);        /* 登录框居中 */
+    -moz-transform:translate(-50%, -70%);
+    transform:translate(-50%, -70%);
+    box-shadow:0 5px 20px #999999;
+}
+.login .wrap h3{
+    font-weight:normal;
+    font-size:18px;
+    margin:0 0 20px;
+    border-bottom:2px solid #DDD;
+    line-height:30px;
+}
+.login .wrap h3 span{
+    border-bottom:2px solid #5CB85C;
+    display:inline-block;
+    margin-bottom:-2px;
+}
+.login .help{
+    color:#F00;
+}
+@media only screen and (min-width:1024px){             /* 登录框响应式缩放 */
+    .login .wrap{ width:30%; }
+}
+@media only screen and (max-width:1024px) and (min-width:800px){
+    .login .wrap{ width:40%; }
+}
+@media only screen and (max-width:800px) and (min-width:500px){
+    .login .wrap{ width:50%; }
+}
+@media only screen and (max-width:500px){
+    .login .wrap{ width:75%; }
+}
+/* 顶部 */
+.admin header{
+    background-color:#337AB7;
+    padding:0 15px;
+}
+.admin header *{
+    color:#FFF;
+    line-height:45px;
+}
+.admin header span{
+    font-size:18px;
+}
+.admin header a{
+    margin-left:6px;
+}
+/* 导航切换 */
+.admin nav li{
+    cursor:pointer;
+    width:50%;
+    line-height:40px;
+    position:relative;
+    background-color:#D4D4D4;
+    cursor:pointer;
+}
+.admin nav li span{
+    background:url(../images/aside-icons.png) no-repeat 0 -44px;
+    padding:0 30px;
+}
+.admin nav li.add span{
+    background-position:0 -2px;
+}
+.admin nav li.edit{
+    width:100%;
+}
+.admin nav li.edit span{
+    background-position:0 -24px;
+}
+.admin nav li .caret{
+    position:absolute;
+    border-top-color:#FFF;
+    border-width:8px;
+    -webkit-transform:rotate(180deg);          /* 重置bootstrap小三角样式，倒立显示 */
+    -moz-transform:rotate(180deg);
+    transform:rotate(180deg);
+    bottom:-1px;
+    right:50%;
+    visibility:hidden;
+}
+.admin nav li.curr, .admin nav li:hover{
+    background-color:#DDD;
+}
+.admin nav li.curr .caret, .admin nav li:hover .caret{
+    visibility:visible;
+}
+
+/* 主体 */
+.admin .wrap{
+    padding-top:20px;
+}
+.admin .wrap > div{
+    display:none;
+}
+.admin .wrap > div.curr{
+    display:block;
+}
+
+/* 新闻列表 */
+.admin .wrap table th{
+    font-weight:400;
+}
+.admin .wrap table td{
+    font-size:14px;
+}
+
+/* 取消修改 */
+.admin .wrap .confirm-cancel{
+    margin-top:25px;
+}
+.admin .wrap .confirm-cancel > a{
+    margin-left:10px;
+}
