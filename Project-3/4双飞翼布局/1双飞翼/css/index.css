@@ -1,0 +1,96 @@
+/* 重置样式 start */
+html,body,div,h2,h1{
+    margin:0;
+    padding:0;
+    font:normal 16px "Microsoft Yahei";
+    text-align:center;
+    font-size:16px;
+}
+/* 重置样式 end */
+
+/* 清除浮动 start */
+.clearfix:before, .clearfix:after{
+    content:'.';
+    display:block;
+    width:0;
+    height:0;
+    line-height:0;
+    font-size:0;
+    visibility:hidden;
+    overflow:hidden;
+}
+.clearfix:after{
+    clear:both;
+}
+.clearfix{
+    zoom:1;
+}
+/* 清除浮动 end */
+
+h2{
+    letter-spacing:0.5em;
+}
+p{
+    font-size:14px;
+}
+.wrapper{
+    width:1000px;
+    margin:0 auto;
+    background-color:#EEF;
+}
+.container{
+    _width:100%;      /* 兼容IE6 */ 
+    height:400px;
+    overflow:hidden;
+    margin:10px 0;
+}
+.header{
+    height:100px;
+    background-color:#DDD;     
+}
+.header h2{
+    line-height:100px;
+}
+.article{
+    float:left;
+    width:100%;
+}
+.article .inner{
+    background-color:#F60;
+    margin:0 130px 0 160px;  /* 左右各留出10px间距 */
+    height:400px;
+}
+.container h2, .container h1{
+    padding-top:100px;
+}
+.article .inner h1{
+    font-size:30px;
+    line-height:30px;
+}
+.aside_left{
+    background-color:#FF0;
+    float:left;
+    width:150px;
+    margin-left:-100%;
+    padding-bottom:9999em;  /* 方便实现与内容等高 */
+}
+.aside_right{
+    background-color:#0F0;
+    float:left;
+    width:120px;
+    margin-left:-120px;     /* 数值为自身宽度 */
+    padding-bottom:9999em;  /* 方便实现与内容等高 */
+}
+.footer{
+    height:200px;
+    background-color:#AAA;             
+}
+.footer h2{
+    line-height:200px;
+}
+.opacity{
+    opacity:0.9;
+}
+.opacity:hover{
+    opacity:1;
+}

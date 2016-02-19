@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="百度首页(兼容IE6)" />
+    <meta name="description" content="百度首页,兼容IE6的百度首页" />
+    <meta name="author" content="天朝草民" />
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <link type="image/x-icon" href="./images/favicon.ico" rel="shortcut icon" />
+    <title>百度一下，你就知道</title>
+    <script src="./js/common.js"></script>
+    <!--[if lte IE 8]><script src="./js/html5.js"></script><![endif]-->
+</head>
+<body>
+    <div class="wrapper">
+        <!-- 导航 start -->
+        <nav>
+            <ul class="nav_list clearfix">
+                <li><a href="" class="menu">新闻</a></li>
+                <li><a href="" class="menu">hao123</a></li>
+                <li><a href="" class="menu">地图</a></li>
+                <li><a href="" class="menu">视频</a></li>
+                <li><a href="" class="menu">贴吧</a></li>
+                <li><a href="" class="menu thin">登录</a></li>
+                <li class="setting" onmouseover="showSetting()" onmouseout="hideSetting()">
+                    <a href="" class="menu thin">设置</a>
+                    <div class="arrow" id="show_setting">
+                        <i></i>
+                        <em></em>
+                        <ul class="more_setting">
+                            <li><a href="">搜索设置</a></li>
+                            <li><a href="">高级搜索</a></li>
+                            <li><a href="">开启预测</a></li>
+                            <li><a href="">搜索历史</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="" class="menu thin more">更多产品</a></li>
+            </ul>
+        </nav>
+        <!-- 导航 end -->
+        <!-- 搜索区域 start -->
+        <div class="form_wrap">
+            <p><img src="./images/logo.png" width="270" height="129" alt="百度logo"></p>
+            <form action="" method="" class="clearfix">
+                <span class="kw_wrap fll" id="kw_wrap" onmouseover="changeColor()" onmouseout="retainColor()">
+                    <input type="text" name="kw" id="kw" class="kw" autofocus="autofocus" autocompete="off" onclick="typeKw()" />
+                    <label for="kw" class="clear_kw" id="clear_kw" onmouseover="clearColor()" onmouseout="clearColorR()" onclick="clearKw()" title="清除"></label>
+                </span>
+                <span class="btn_wrap fll">
+                    <input type="submit" class="s_btn" id="s_btn" value="百度一下" onmouseover="btnH()" onmouseout="btnR()" />
+                </span>
+            </form>
+        </div>
+        <!-- 搜索区域 end -->
+        <!-- 底部 start -->
+        <footer>
+            <p>
+                <a href="">把百度设为主页</a>
+                <a href="">关于百度</a>
+                <a href="">About&nbsp;Baidu</a>
+            </p>
+            <p class="copyright">
+                &copy;2015 Baidu 
+                <a href="">使用百度前必读</a> 
+                <a href="">意见反馈</a> 
+                京ICP证030173号
+                <i></i>
+            </p>
+        </footer>
+        <!-- 底部 end -->
+    </div>
+</body>
+</html>

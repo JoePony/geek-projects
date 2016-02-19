@@ -1,0 +1,152 @@
+/* 重置样式 start */
+html,body,div,ul,li{
+    margin:0;
+    padding:0;
+    list-style:none outside none;
+}
+html,body{
+    width:100%;
+    height:100%;
+    background-color:#EEE;
+}
+/* 重置样式 end */
+
+/* 魔方水平垂直居中 start */
+body{
+    display:-webkit-box;
+    -webkit-box-align:center;
+    -webkit-box-pack:center;
+    display:-moz-box;
+    -moz-box-align:center;
+    -moz-box-pack:center;
+    display:box;
+    box-align:center;
+    box-pack:center;
+}
+/* 魔方水平垂直居中 end */
+
+.view, .box{
+    width:162px; 
+    height:162px; 
+}
+.box{
+    /*position:absolute;*/       /* 貌似不设定没啥影响，而且还少了右侧滚动条  */
+    /*-moz-perspective:800px;*/  /* 设定会有问题，魔方会变梯形*/                                      
+    -webkit-transform-style:preserve-3d;                              /* 必须设定 */
+    -webkit-transform-origin:50% 50% 0;                               /* 设定基点位置 */
+
+    -moz-transform-style:perserve-3d;
+    -moz-transform-origin:50% 50% 0;
+
+    transform-style:preserve-3d;
+    transform-origin:50% 50% 0;
+
+    -webkit-animation:rotating 10s linear 0.5s infinite normal;       /* 10s内完成旋转 */ 
+    -moz-animation:rotating 10s linear 0.5s infinite normal;
+    animation:rotating 10s linear 0.5s infinite normal;  
+}
+.shadow{
+    width:50px;
+    height:50px;
+    background-color:333;
+    box-shadow:0 0 20px 20px #333;
+    position:absolute;
+    margin:200px 0 0 40px;
+
+    -moz-animation:rotating 10s linear 0.5s infinite normal;
+}
+.box ul{
+    width:162px;
+    height:162px;
+    position:absolute;                                                /* 必须设定 */
+    font:bold 12px/50px "Microsoft Yahei";
+    text-align:center;
+    border-radius:7px;
+}
+.box ul:after{                                                        /* 清除浮动 */
+    content:' ';
+    display:block;
+    clear:both;
+    overflow:hidden;
+}
+/* 设定6个面的3d位置 strat */
+.box > ul:nth-child(1){                                               /* 设定白色面 */                                         
+    -webkit-transform:translateZ(80px);
+    -moz-transform:translateZ(80px);
+    background:rgba(255,255,255,1);
+}
+.box > ul:nth-child(2){                                               /* 设定黄色面 */
+    -webkit-transform:rotateY(90deg) translateZ(80px);
+    -moz-transform:rotateY(90deg) translateZ(80px);
+    background:rgba(255,255,0,1);
+}
+.box > ul:nth-child(3){                                                /* 设定蓝色面 */
+    -webkit-transform:translateZ(-80px);
+    -moz-transform:translateZ(-80px);
+    background:rgba(0,50,255,1);
+}
+.box > ul:nth-child(4){                                                /* 设定红色面 */
+    -webkit-transform:rotateY(90deg) translateZ(-80px);
+    -moz-transform:rotateY(90deg) translateZ(-80px);
+    background:rgba(255,0,0,1);
+}
+.box > ul:nth-child(5){                                                /* 设定绿色面 */
+    -webkit-transform:rotateX(90deg) translateZ(80px);
+    -moz-transform:rotateX(90deg) translateZ(80px);
+    background:rgba(0,255,0,1);
+}
+.box > ul:nth-child(6){                                                /* 设定橙色面 */
+    -webkit-transform:rotateX(90deg) translateZ(-80px);
+    -moz-transform:rotateX(90deg) translateZ(-80px);
+    background:rgba(255,120,0,1);
+}
+/* 设定6个面的3d位置 strat */
+
+.box li{                                                               /* 设定每一面的9个小块 */
+    width:50px;
+    height:50px;
+    border:2px solid #000;
+    border-radius:7px;
+    float:left;
+}
+
+/* 设定动画规则 strat */
+@-webkit-keyframes rotating{                                           /* 针对webkit浏览器 */
+    0%{-webkit-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+    10%{-webkit-transform:rotateX(0deg) rotateY(0deg) rotateZ(180deg);}
+    20%{-webkit-transform:rotateX(0deg) rotateY(180deg) rotateZ(180deg);}
+    30%{-webkit-transform:rotateX(180deg) rotateY(180deg) rotateZ(180deg);}
+    40%{-webkit-transform:rotateX(-135deg) rotateY(180deg) rotateZ(180deg);}
+    50%{-webkit-transform:rotateX(-135deg) rotateY(-270deg) rotateZ(180deg);}
+    60%{-webkit-transform:rotateX(-135deg) rotateY(180deg) rotateZ(180deg);}
+    70%{-webkit-transform:rotateX(-135deg) rotateY(180deg) rotateZ(-180deg);}
+    80%{-webkit-transform:rotateX(-135deg) rotateY(-225deg) rotateZ(-180deg);}
+    100%{-webkit-transform:rotateX(360deg) rotateY(720deg) rotateZ(720deg);}
+}
+@-moz-keyframes rotating{                                              /* 针对firefox浏览器 */
+    0%{-moz-transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+    10%{-moz-transform:rotateX(0deg) rotateY(0deg) rotateZ(180deg);}
+    20%{-moz-transform:rotateX(0deg) rotateY(180deg) rotateZ(180deg);}
+    30%{-moz-transform:rotateX(180deg) rotateY(180deg) rotateZ(180deg);}
+    40%{-moz-transform:rotateX(-135deg) rotateY(180deg) rotateZ(180deg);}
+    50%{-moz-transform:rotateX(-135deg) rotateY(-270deg) rotateZ(180deg);}
+    60%{-moz-transform:rotateX(-135deg) rotateY(180deg) rotateZ(180deg);}
+    70%{-moz-transform:rotateX(-135deg) rotateY(180deg) rotateZ(-180deg);}
+    80%{-moz-transform:rotateX(-135deg) rotateY(-225deg) rotateZ(-180deg);}
+    100%{-moz-transform:rotateX(360deg) rotateY(720deg) rotateZ(720deg);}
+}
+@keyframes rotating{                                                     /* W3C通用样式 */
+    0%{transform:rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+    10%{transform:rotateX(0deg) rotateY(0deg) rotateZ(180deg);}
+    20%{transform:rotateX(0deg) rotateY(180deg) rotateZ(180deg);}
+    30%{transform:rotateX(180deg) rotateY(180deg) rotateZ(180deg);}
+    40%{transform:rotateX(-135deg) rotateY(180deg) rotateZ(180deg);}
+    50%{transform:rotateX(-135deg) rotateY(-270deg) rotateZ(180deg);}
+    60%{transform:rotateX(-135deg) rotateY(180deg) rotateZ(180deg);}
+    70%{transform:rotateX(-135deg) rotateY(180deg) rotateZ(-180deg);}
+    80%{transform:rotateX(-135deg) rotateY(-225deg) rotateZ(-180deg);}
+    100%{transform:rotateX(360deg) rotateY(720deg) rotateZ(720deg);}
+}
+/* 设定动画规则 end */
+
+/* 全部样式结束 */

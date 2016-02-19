@@ -1,0 +1,133 @@
+/* 重置样式 start */
+html,body,div{
+    margin:0;
+    padding:0;
+}
+/* 重置样式 end */
+
+html{
+    width:100%;
+    height:100%;
+}
+body{
+    width:inherit;              /* 父元素最大显示，以便子元素满屏居中 */
+    height:inherit;
+    display:-moz-box;           /* 使动画对象居中显示 */
+    -moz-box-pack:center;
+    -moz-box-align:center;
+
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+
+    display:box;
+    box-pack:center;
+    box-align:center;
+
+    -webkit-animation:bg 4s linear 0s infinite normal;
+    -moz-animation:bg 4s linear 0s infinite normal;
+    animation:bg 4s linear 0s infinite normal;       /* 背景色变换动画 */
+}
+.round{
+    border-radius:50%;
+}
+.taiji{
+    width:200px;
+    height:200px;
+    overflow:hidden;
+    position:relative;
+    -webkit-animation:rotate 4s linear 0s infinite normal;  /* 4s内完成的线性循环rotate动画 */
+    -moz-animation:rotate 4s linear 0s infinite normal;
+    animation:rotate 4s linear 0s infinite normal;
+    background-color:#000;
+}
+.taiji > div{                            /* 仅设置第一层子元素div */
+    width:100px;
+    height:100px;
+    position:absolute;
+}
+.taiji .tl{
+    top:0;
+    left:50px;
+    background:#000;
+    z-index:1;
+}
+.taiji .tr{
+    top:0;
+    right:0;
+    background:#000;
+}
+.taiji .bl{
+    bottom:0;
+    left:0;
+}
+.taiji .br{
+    bottom:0;
+    right:50px;
+    background-color:#FFF;
+    z-index:1;
+}
+.taiji .cover{
+    width:100px;
+    height:200px;
+    top:0;
+    left:0;
+    background-color:#FFF;
+}
+
+/* 小圆样式 */
+.taiji .small{
+    width:20px;
+    height:20px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin:-10px 0 0 -10px;            /* 小圆居中 */
+    background-color:#FFF;
+}
+.taiji .br .small{
+    right:0;
+    top:50%;
+    background-color:#000;
+}
+
+/* 旋转动画规则 */
+@-webkit-keyframes rotate{
+    0%{-webkit-transform:rotate(0deg) scale(0) translate(-10em,0);}
+    30%{-webkit-transform:rotate(-120deg) scale(1) translate(0,0); box-shadow:0 0 20px #DDD;}
+    50%{-webkit-transform:rotate(-180deg) scale(1) translate(0,0); box-shadow:0 0 30px 20px #FFF;}
+    70%{-webkit-transform:rotate(-220deg) scale(1) translate(0,0); box-shadow:0 0 20px #DDD;}
+    100%{-webkit-transform:rotate(-360deg) scale(0) translate(-10em,-10em); }
+}
+@-moz-keyframes rotate{
+    0%{-moz-transform:rotate(0deg) scale(0) translate(-10em,0);}
+    30%{-moz-transform:rotate(-120deg) scale(1) translate(0,0); box-shadow:0 0 20px #DDD;}
+    50%{-moz-transform:rotate(-180deg) scale(1) translate(0,0); box-shadow:0 0 30px 20px #FFF;}
+    70%{-moz-transform:rotate(-220deg) scale(1) translate(0,0); box-shadow:0 0 20px #DDD;}
+    100%{-moz-transform:rotate(-360deg) scale(0) translate(-10em,-10em); }
+}
+@keyframes rotate{
+    0%{transform:rotate(0deg) scale(0) translate(-10em,0);}
+    30%{transform:rotate(-120deg) scale(1) translate(0,0); box-shadow:0 0 20px #DDD;}
+    50%{transform:rotate(-180deg) scale(1) translate(0,0); box-shadow:0 0 30px 20px #FFF;}
+    70%{transform:rotate(-220deg) scale(1) translate(0,0); box-shadow:0 0 20px #DDD;}
+    100%{transform:rotate(-360deg) scale(0) translate(-10em,-10em); }
+}
+
+/* 背景变色动画规则 */
+@-webkit-keyframes bg{
+    0%{background-color:#FFF;}
+    50%{background-color:#000;}
+    0%{background-color:#FFF;}
+}
+@-moz-keyframes bg{
+    0%{background-color:#FFF;}
+    50%{background-color:#000;}
+    0%{background-color:#FFF;}
+}
+@keyframes bg{
+    0%{background-color:#FFF;}
+    50%{background-color:#000;}
+    0%{background-color:#FFF;}
+}
+

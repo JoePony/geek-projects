@@ -1,0 +1,81 @@
+/* 重置样式 start */
+html,body,div,h2,h1,p{
+    margin:0;
+    padding:0;
+    font:normal 16px "Microsoft Yahei";
+    text-align:center;
+    font-size:16px;
+}
+/* 重置样式 end */
+
+/* 清除浮动 start */
+.clearfix:before, .clearfix:after{
+    content:'.';
+    display:block;
+    width:0;
+    height:0;
+    line-height:0;
+    font-size:0;
+    visibility:hidden;
+    overflow:hidden;
+}
+.clearfix:after{
+    clear:both;
+}
+.clearfix{
+    zoom:1;
+}
+/* 清除浮动 end */
+
+.wrapper{
+    width:1000px;
+    margin:0 auto;
+    background-color:#EEF;
+}
+.header{
+    height:100px;
+    background-color:#DDD;     
+}
+.container{
+    margin:10px 0;
+    height:400px;
+    overflow:hidden;
+    _position:relative;
+    _z-index:2;
+}
+.container h2, .container h1{
+    padding-top:100px;
+}
+.aside_left{
+    background-color:#F00;
+    float:left;
+    width:200px;
+    margin-left:-100%;
+    padding-bottom:9999em;
+}
+.article{
+    float:left;
+    width:100%;
+}
+.article .inner{
+    background-color:#FF0;
+    margin-left:340px;       /* 左翼宽度+右翼宽度+右翼左边距10px+左边距10px */
+    height:400px;
+}
+.aside_right{
+    background-color:#0F0;
+    float:left;
+    width:120px;
+    margin-left:-100%;
+    position:relative;
+    left:210px;              /* 左翼宽度+右翼左边距10px */ 
+    padding-bottom:9999em;
+    z-index:1;
+}
+.footer{
+    height:200px;
+    background-color:#AAA;             
+}
+.footer h2{
+    line-height:200px;
+}
