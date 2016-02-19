@@ -1,0 +1,1 @@
+requirejs.config({baseUrll:"./",path:{index:"index"}}),requirejs(["index"],function(){});

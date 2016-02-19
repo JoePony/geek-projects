@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="static/css/cube.min.css" />
+    <link rel="stylesheet" href="static/css/index.min.css" />
+    <script  data-main="static/js/main.js" src="static/js/lib/require.min.js"></script>
+    <title>高级前端工程师面试题</title>
+</head>
+<body>
+    <!-- 顶部 -->    
+    <header>
+        <h1>高级前端工程师面试题<sub>持续更新...</sub></h1>
+    </header>
+    <!-- 主体外部 -->
+    <div class="wrapper clearfix">
+        <!-- 主体 -->
+        <div class="main">
+            <div class="inner">
+                <h2 id="html">html</h2>
+                <figure>
+                    <figcaption id="html-q1">你做的页面在哪些流览器测试过？这些浏览器的内核分别是什么?</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        chrome、firefox、IE6-10、safari、360。<br>chrome内核为webkit、firefox内核为moz、IE内核为IE、safari内核为webkit、360内核为webkit(老版本为IE内核)。
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        IE: trident内核、Firefox：gecko内核、Safari:webkit内核、Opera:以前是presto内核，Opera现已改用Google Chrome的Blink内核、Chrome:Blink(基于webkit，Google与Opera Software共同开发)。
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="html-q2">每个HTML文件里开头都有个很重要的东西，Doctype，知道这是干什么的吗？</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        用于规定页面文件的文档类型。
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        声明位于文档中的最前面的位置，处于 ≶html> 标签之前。此标签可告知浏览器文档使用哪种 HTML 或 XHTML 规范。（重点：告诉浏览器按照何种规范解析页面）
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="html-q3">Quirks模式是什么？它和Standards模式有什么区别</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        简单来说，Quirks Mode 就是浏览器为了兼容很早之前针对旧版本浏览器设计、并未严格遵循 W3C 标准的网页而产生的一种页面渲染模式。<br>
+                        区别： 总体会有布局、样式解析和脚本执行三个方面的区别。 盒模型：在W3C标准中，如果设置一个元素的宽度和高度，指的是元素内容的宽度和高度，而在Quirks 模式下，IE的宽度和高度还包含了padding和border。<br>
+                        区别： 总体会有布局、样式解析和脚本执行三个方面的区别。 <br>盒模型：在W3C标准中，如果设置一个元素的宽度和高度，指的是元素内容的宽度和高度，而在Quirks 模式下，IE的宽度和高度还包含了padding和border。 <br>
+                        设置行内元素的高宽：在Standards模式下，给等行内元素设置wdith和height都不会生效，而在quirks模式下，则会生效。 <br>设置百分比的高度：在standards模式下，一个元素的高度是由其包含的内容来决定的，如果父元素没有设置百分比的高度，子元素设置一个百分比的高度是无效的用margin:0 auto设置水平居中：使用margin:0 auto在standards模式下可以使元素水平居中，但在quirks模式下却会失效。 <br>（还有很多，答出什么不重要，关键是看他答出的这些是不是自己经验遇到的，还是说都是看文章看的，甚至完全不知道。） 
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="html-q4">div+css的布局较table布局有什么优点？</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        前者在编写和维护方面更加方便，浏览器解析更快，对搜索引擎更友好。
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        改版的时候更方便 只要改css文件。 页面加载速度更快、结构化清晰、页面显示简洁。 表现与结构相分离。易于优化（seo）搜索引擎更友好，排名更容易靠前。 
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="html-q5">知道什么是微格式吗？谈谈理解。在前端构建中应该考虑微格式吗？</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        不好意思，暂时没有对微格式的了解。
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        微格式（Microformats）是一种让机器可读的语义化XHTML词汇的集合，是结构化数据的开放标准。是为特殊应用而制定的特殊格式。
+                        优点：将智能数据添加到网页上，让网站内容在搜索引擎结果界面可以显示额外的提示。（应用范例：豆瓣，有兴趣自行google） 
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="html-q6">在css/js代码上线之后开发人员经常会优化性能，从用户刷新网页开始，一次js请求一般情况下有哪些地方会有缓存处理？</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        浏览器缓存、cdn缓存
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        dns缓存，cdn缓存，浏览器缓存，服务器缓存。 
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="html-q7">一个页面上有大量的图片（大型电商网站），加载很慢，你有哪些方法优化这些图片的加载，给用户更好的体验。</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        减少尺寸到可接受的范围；<br>尽量压缩背景图为一张sprite，以较少网络请求；<br>考虑转换图片为base64图片加载；<br>开启缓存机制。
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        图片懒加载，在页面上的未可视区域可以添加一个滚动条事件，判断图片位置与浏览器顶端的距离与页面的距离，如果前者小于后者，优先加载。<br>
+                        如果为幻灯片、相册等，可以使用图片预加载技术，将当前展示图片的前一张和后一张优先下载。<br>
+                        如果图片为css图片，可以使用CSSsprite，SVGsprite，Iconfont、Base64等技术。<br>
+                        如果图片过大，可以使用特殊编码的图片，加载时会先加载一张压缩的特别厉害的缩略图，以提高用户体验。<br>
+                        如果图片展示区域小于图片的真实大小，则因在服务器端根据业务需要先行进行图片压缩，图片压缩后大小与展示一致。 <br>
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="html-q8">你如何理解HTML结构的语义化？　</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        语义化就是根据功能和业务逻辑组织和编写相应的html标签元素，从而使浏览器对代码编译更快捷、搜索引擎更容易抓取、后期维护更便捷。
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        去掉或样式丢失的时候能让页面呈现清晰的结构：
+                        html本身是没有表现的，我们看到例如h1是粗体，字体大小2em，加粗；strong是加粗的，不要认为这是html的表现，这些其实html默认的css样式在起作用，所以去掉或样式丢失的时候能让页面呈现清晰的结构不是语义化的HTML结构的优点，但是浏览器都有有默认样式，默认样式的目的也是为了更好的表达html的语义，可以说浏览器的默认样式和语义化的HTML结构是不可分割的。<br>
+                        屏幕阅读器（如果访客有视障）会完全根据你的标记来“读”你的网页.<br>
+                        例如,如果你使用的含语义的标记,屏幕阅读器就会“逐个拼出”你的单词,而不是试着去对它完整发音.<br>
+                        PDA、手机等设备可能无法像普通电脑的浏览器一样来渲染网页（通常是因为这些设备对CSS的支持较弱） <br>使用语义标记可以确保这些设备以一种有意义的方式来渲染网页.理想情况下,观看设备的任务是符合设备本身的条件来渲染网页.<br>
+                        语义标记为设备提供了所需的相关信息,就省去了你自己去考虑所有可能的显示情况（包括现有的或者将来新的设备）.例如,一部手机可以选择使一段标记了标题的文字以粗体显示.<br>而掌上电脑可能会以比较大的字体来显示.无论哪种方式一旦你对文本标记为标题,您就可以确信读取设备将根据其自身的条件来合适地显示页面.<br>
+                        搜索引擎的爬虫也依赖于标记来确定上下文和各个关键字的权重 过去你可能还没有考虑搜索引擎的爬虫也是网站的“访客”,但现在它们他们实际上是极其宝贵的用户.没有他们的话,搜索引擎将无法索引你的网站,然后一般用户将很难过来访问.<br>
+                        你的页面是否对爬虫容易理解非常重要,因为爬虫很大程度上会忽略用于表现的标记,而只注重语义标记.
+                        因此,如果页面文件的标题被标记,而不是,那么这个页面在搜索结果的位置可能会比较靠后.除了提升易用性外,语义标记有利于正确使用CSS和JavaScript,因为其本身提供了许多“钩钩”来应用页面的样式与行为.<br>
+                        SEO主要还是靠你网站的内容和外部链接的。<br>
+                        便于团队开发和维护<br>
+                        W3C给我们定了一个很好的标准，在团队中大家都遵循这个标准，可以减少很多差异化的东西，方便开发和维护，提高开发效率，甚至实现模块化开发。 
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="html-q9">谈谈以前端角度出发做好SEO需要考虑什么？</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        注重开发时的语义化规范；
+                        keywords关键词、description描述必不可少；
+                        重点内容前置；
+                        图片的alt、title尽量写全；
+                        合理利用h1、h2的权重。
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        了解搜索引擎如何抓取网页和如何索引网页
+                        你需要知道一些搜索引擎的基本工作原理，各个搜索引擎之间的区别，搜索机器人（SE robot 或叫 web crawler）如何进行工作，搜索引擎如何对搜索结果进行排序等等。<br>
+                        Meta标签优化
+                        主要包括主题（Title)，网站描述(Description)，和关键词（Keywords）。还有一些其它的隐藏文字比如Author（作者），Category（目录），Language（编码语种）等。<br>
+                        如何选取关键词并在网页中放置关键词
+                        搜索就得用关键词。关键词分析和选择是SEO最重要的工作之一。首先要给网站确定主关键词（一般在5个上下），然后针对这些关键词进行优化，包括关键词密度（Density），相关度（Relavancy），突出性（Prominency）等等。<br>
+                        了解主要的搜索引擎
+                        虽然搜索引擎有很多，但是对网站流量起决定作用的就那么几个。比如英文的主要有Google，Yahoo，Bing等；中文的有百度，搜狗，有道等。不同的搜索引擎对页面的抓取和索引、排序的规则都不一样。还要了解各搜索门户和搜索引擎之间的关系，比如AOL网页搜索用的是Google的搜索技术，MSN用的是Bing的技术。<br>
+                        主要的互联网目录
+                        Open Directory自身不是搜索引擎，而是一个大型的网站目录，他和搜索引擎的主要区别是网站内容的收集方式不同。目录是人工编辑的，主要收录网站主页；搜索引擎是自动收集的，除了主页外还抓取大量的内容页面。<br>
+                        按点击付费的搜索引擎<br>
+                        搜索引擎也需要生存，随着互联网商务的越来越成熟，收费的搜索引擎也开始大行其道。最典型的有Overture和百度，当然也包括Google的广告项目Google Adwords。越来越多的人通过搜索引擎的点击广告来定位商业网站，这里面也大有优化和排名的学问，你得学会用最少的广告投入获得最多的点击。<br>
+                        搜索引擎登录
+                        网站做完了以后，别躺在那里等着客人从天而降。要让别人找到你，最简单的办法就是将网站提交（submit）到搜索引擎。如果你的是商业网站，主要的搜索引擎和目录都会要求你付费来获得收录（比如Yahoo要299美元），但是好消息是（至少到目前为止）最大的搜索引擎Google目前还是免费，而且它主宰着60％以上的搜索市场。<br>
+                        链接交换和链接广泛度（Link Popularity）
+                        网页内容都是以超文本（Hypertext）的方式来互相链接的，网站之间也是如此。除了搜索引擎以外，人们也每天通过不同网站之间的链接来Surfing（“冲浪”）。其它网站到你的网站的链接越多，你也就会获得更多的访问量。更重要的是，你的网站的外部链接数越多，会被搜索引擎认为它的重要性越大，从而给你更高的排名。<br>
+                        合理的标签使用 
+                    </p>
+                </figure>
+                <h2 id="css">css</h2>
+                <figure>
+                    <figcaption id="css-q1">有哪项方式可以对一个DOM设置它的CSS样式？</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        内部样式、外部样式、内联样式
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        外部样式表，引入一个外部css文件<br>
+                        内部样式表，将css代码放在 &lt;head&gt; 标签内部<br>
+                        内联样式，将css样式直接定义在 HTML 元素内部 <br>
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="css-q2">CSS都有哪些选择器？</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        类选择器、id选择器、标签选择器、子元素选择器、属性选择器
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        派生选择器（用HTML标签申明）<br>
+                        id选择器（用DOM的ID申明）<br>
+                        类选择器（用一个样式类名申明）<br>
+                        属性选择器（用DOM的属性申明，属于CSS2，IE6不支持，不常用，不知道就算了）<br>
+                        除了前3种基本选择器，还有一些扩展选择器，包括<br>
+                        后代选择器（利用空格间隔，比如div .a{ }）<br>
+                        群组选择器（利用逗号间隔，比如p,div,#a{ }） <br>
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="css-q3">CSS选择器的优先级是怎么样定义的？</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        !important声明1000分 > id选择器100分 > 类选择器10分 > 标签选择器1分
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        用1表示派生选择器的优先级<br>
+                        用10表示类选择器的优先级<br>
+                        用100标示ID选择器的优先级<br>
+                        div.test1 .span var 优先级 1+10 +10 +1<br>
+                        span#xxx .songs li 优先级1+100 + 10 + 1<br>
+                        #xxx li 优先级 100 +1 <br>
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="css-q4">下面标签内的文字是什么颜色的？</figcaption>
+                    <pre>
+&lg;style&gt;
+    .classA{color:blue;}
+    .classB{color:red;}
+&lg;/style&gt;
+&lg;body&gt;
+    &lt;p class="classB classA"&gt;123&lt;/p&gt;
+&lg;/body&gt;
+                    </pre>
+                    <p>
+                        <span>我的回答：</span>
+                        红色
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        red。与样式定义在文件中的先后顺序有关，即是后面的覆盖前面的，与在中的先后关系无关。 
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="css-q5">超链接访问过后hover样式就不出现的问题是什么？如何解决？</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        应该按照a:linked{}、a:visited{}、a:hover{}、a:active{}的顺序写样式
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        被点击访问过的超链接样式不再具有hover和active了,解决方法是改变CSS属性的排列顺序: L-V-H-A（link,visited,hover,active） 
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="css-q6">什么是Css Hack？ie6,7,8的hack分别是什么？</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        css hack是针对低版本浏览器的不同渲染特性而言的特殊规范，目的是达到同样的渲染效果。<br>
+                        针对IE6、7分别前置_和*，比如height:_2em; height:*3em;
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        针对不同的浏览器写不同的CSS code的过程，就是CSS hack。 
+                        <pre>
+#test{  
+    width:300px;  
+    height:300px;  
+
+    background-color:blue;      /*firefox*/
+    background-color:red\9;      /*all ie*/
+    background-color:yellow;    /*ie8*/
+    +background-color:pink;        /*ie7*/
+    _background-color:orange;       /*ie6*/    } 
+    :root #test { background-color:purple\9; }  /*ie9*/
+    @media all and (min-width:0px){ #test {background-color:black;} }  /*opera*/
+    @media screen and (-webkit-min-device-pixel-ratio:0){ #test {background-color:gray;} }       /*chrome and safari*/
+}              
+                        </pre>
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="css-q7">行内元素和块级元素的具体区别是什么？行内元素的padding和margin可设置吗？</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        行内元素inline不会单独占一行，块级元素会单独占一行。<br>
+                        行内元素的padding、margin只对left和right有效，对top和bottom无效。
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        块级元素(block)特性：<br>
+                        总是独占一行，表现为另起一行开始，而且其后的元素也必须另起一行显示;<br>
+                        宽度(width)、高度(height)、内边距(padding)和外边距(margin)都可控制;<br>
+                        内联元素(inline)特性：<br>
+                        和相邻的内联元素在同一行;<br>
+                        宽度(width)、高度(height)、内边距的top/bottom(padding-top/padding-bottom)和外边距的top/bottom(margin-top/margin-bottom)
+                        都不可改变（也就是padding和margin的left和right是可以设置的），就是里面文字或图片的大小。 
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="css-q8">浏览器还有默认的天生inline-block元素（拥有内在尺寸，可设置高宽，但不会自动换行），有哪些？</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        textarea、label
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        input 、img 、button 、texterea 、label。 
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="css-q9">rgba()和opacity的透明效果有什么不同？</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        rgba()可以设置颜色和透明度、opacity只能设置透明度
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        rgba()和opacity都能实现透明效果，但最大的不同是opacity作用于元素，以及元素内的所有内容的透明度， 而rgba()只作用于元素的颜色或其背景色。（设置rgba透明的元素的子元素不会继承透明效果！） 
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="css-q10">Sass、LESS是什么？大家为什么要使用他们？</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        sass、less是css代码编程化的一种机制，最终的编译成css文件。<br>
+                        减少重复工作，提高开发效率、可维护性。
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        他们是CSS预处理器。他是CSS上的一种抽象层。他们是一种特殊的语法/语言编译成CSS。<br>
+                        例如Less是一种动态样式语言. <br>将CSS赋予了动态语言的特性，如变量，继承，运算， 函数. LESS 既可以在客户端上运行 (支持IE 6+, Webkit, Firefox)，也可一在服务端运行 (借助 Node.js)。<br>
+                        为什么要使用它们？<br>
+                        结构清晰，便于扩展。<br>
+                        可以方便地屏蔽浏览器私有语法差异。这个不用多说，封装对浏览器语法差异的重复处理，减少无意义的机械劳动。<br>
+                        可以轻松实现多重继承。<br>
+                        完全兼容 CSS 代码，可以方便地应用到老项目中。LESS 只是在 CSS 语法上做了扩展，所以老的 CSS 代码也可以与 LESS 代码一同编译。 
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="css-q11">让一个input的背景颜色变成红色</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        <pre>
+input{
+    background-color:#F00;
+}</pre>
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        
+                    </p>
+                </figure>
+                <h2 id="js">Javascript</h2>
+                <figure>
+                    <figcaption id="js-q1">JavaScript的数据类型都有什么？</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        int整型、string字符串、float浮点型、array数组、objec对象、function函数
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        基本数据类型：String,Boolean,Number,Undefined, Null<br>
+                    　　引用数据类型：Object(Array,Date,RegExp,Function)
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="js-q2">如何判断某变量是否为数组数据类型？</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        Array.prototype.isArray($arr);
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        <pre>
+ if(typeof Array.isArray==="undefined")
+ {
+   Array.isArray = function(arg){
+         return Object.prototype.toString.call(arg)==="[object Array]"
+     };  
+ }
+                        </pre>
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="js-q3">已知ID的Input输入框，希望获取这个输入框的输入值，怎么做？(不使用第三方框架)</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        <pre>
+document.getElementById('id').value();
+                        </pre>
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        <pre>
+document.getElementById('id').value;
+                        </pre>
+                    </p>
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="js-q4">希望获取到页面中所有的checkbox怎么做？(不使用第三方框架)</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                       <pre>
+document.getElementsByTagName('input').type('checkbox');
+                       </pre>
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        <pre>
+var inputs=document.getElementsByTagName('input');
+var list=[];
+var length=inputs.length;
+while(length--){
+    if(inputs[length].type=='checkbox'){
+        list.push(inputs[length]);
+    }
+}
+                        </pre>
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="js-q5">用javascript原生代码、jQuery分别获取text的表单值、radio的表单值、h2的html内容</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        <pre>
+/* javascript */
+var textV=document.getElementById('text').value;
+var radioV=document.getElementById('radio').value;
+var h2V=document.getElementById('h2').text;
+/* jquery */
+var textV=$('#text').value();
+var radioV=$('#radio').value();
+var h2V=$('#h2').text();
+                        </pre>
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+
+                        <pre>
+/* javascript */
+var textV=document.getElementById('text').value;
+var radioV=document.getElementById('radio').value;
+var h2V=document.getElementById('h2').innerHTML;
+/* jquery */
+var textV=$('#text').val();
+var radioV=$('#radio').val();
+var h2V=$('#h2').text();
+                        </pre>
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="js-q6">设置一个已知ID的DIV的html内容为xxxx，字体颜色设置为黑色(不使用第三方框架)</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        <pre>
+var div=document.getElementById('id');
+div.innerText('xxxx'); //或者div.innerHTML('xxxx'); 
+div.style('color')='#000';
+                        </pre>
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        <pre>
+var dom = document.getElementById(“ID”);
+dom.innerHTML = “xxxx”
+dom.style.color = “#000”
+                        </pre>
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="js-q7">JavaScript DOM事件绑定的方式及其优缺点</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        <pre>
+/* 直接在dom中绑定 */
+<input type="button" onclick="fnClick">
+/* 在js中绑定 */
+document.getElementById('btn').onclick=function(){};
+                        </pre>
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        传统方式:
+                        <pre>
+x.onclick=function(e){...}
+                        </pre>
+                        优点1：简单而稳定，在各个浏览器中运行一致<br>
+                        优点2：this关键字指向当前对象<br>
+                        缺点1：只按照冒泡执行事件，而非冒泡和捕获执行<br>
+                        缺点2：对同一元素设置不同事件，前面的事件会被后面的事件覆盖<br>
+                        缺点3：参数e对IE浏览器无效<br>
+                        <br>
+                        W3C方式:
+                        <pre>
+x.addEventListener('click',function(){});
+                        </pre>
+                        优点1：可以指定冒泡(false)还是捕获(true)<br>
+                        优点2：this指向当前对象<br>
+                        优点3：事件对象总是可以通过参数e捕获<br>
+                        缺点：IE浏览器不支持，需要为IE设定x.attachEvent函数
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="js-q8">看下列代码输出为何？解释原因</figcaption>
+                    <pre>
+var a;
+alert(typeof a);
+alert(b);</pre>
+                    <p>
+                        <span>我的回答：</span>
+                        undefined、b is not defined
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        Undefined是一个只有一个值的数据类型，这个值就是“undefined”，在使用var声明变量但并未对其赋值进行初始化时，这个变量的值就是undefined。而b由于未声明将报错。注意未申明的变量和声明了未赋值的是不一样的。
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="js-q9">下面的代码，输出什么，foo的类型为什么</figcaption>
+                        <pre>
+var foo = "11"+2-"1";
+var bar = "11"+2+"1"; 
+console.log(foo);
+console.log(typeof foo);
+console.log(bar);
+console.log(typeof bar);</pre>
+                    <p>
+                        <span>我的回答：</span>
+                        foo为12、number<br>
+                        bar为1121、string
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        foo为111、number<br>
+                        bar为1121、string
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="js-q10">下面代码的结果</figcaption>
+                    <pre>
+var a = new Object();
+a.value = 1;
+b = a;
+b.value = 2;
+alert(a.value);
+                    </pre>
+                    <p>
+                        <span>我的回答：</span>
+                        2
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        2（考察引用数据类型细节）
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="js-q11">已知数组var stringArray = [“This”, “is”, “Baidu”, “Campus”]，Alert出”This is Baidu Campus”</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        <pre>
+stringArray.join(' ');
+                        </pre>
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        <pre>
+alert(stringArray.join(" "))
+                        </pre>
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="js-q12">var numberArray = [3,6,2,4,1,5]; （考察基础API）<br>
+                　　1) 实现对该数组的倒排，输出[5,1,4,2,6,3]<br>
+                　　2) 实现对该数组的降序排列，输出[6,5,4,3,2,1]</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        倒序：
+                        <pre>
+numberArray.reverse();</pre>
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        <pre>
+var numberArray = [3,6,2,4,1,5];
+numberArray.reverse(); // 5,1,4,2,6,3
+numberArray.sort(function(a,b){  //6,5,4,3,2,1
+   return b-a; 
+})</pre>
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="js-q13">
+                    &lt;tr&gt;&lt;td&gt;{id}&lt;/td&gt;&lt;td&gt;{name}&lt;/td&gt;&lt;/tr&gt;”中的{id}替换成10，{name}替换成Tony （使用正则表达式）</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        <pre>
+str.replace(/{id}/,10);
+str.replace(/{name}/,'Tony');</pre>
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        "<tr><td>{id}</td><td>{id}_{$name}</td></tr>".replace(/{\$id}/g, '10').replace(/{\$name}/g, ‘Tony’);
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="js-q14">看下列代码，将会输出什么?(变量声明提升)</figcaption>
+                    <pre>
+var foo = 1;
+(function(){
+    console.log(foo);
+    var foo = 2;
+    console.log(foo);
+})()</pre>
+                    <p>
+                        <span>我的回答：</span>
+                        打印1和2
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        输出undefined 和 2
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="js-q15">用js实现随机选取10--100之间的10个数字，存入一个数组，并排序。</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        <pre>
+var arr=[];
+var r;
+for(var i=0;i<10;i++){
+    r=parseInt(Math.random()*90+10);
+    arr.push(r);
+}
+arr=arr.sort();</pre>
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        <pre>
+var iArray = []; 
+funtion getRandom(istart, iend){
+        var iChoice = istart - iend +1;
+        return Math.floor(Math.random() * iChoice + istart;
+}
+for(var i=0; i<10; i++){
+        iArray.push(getRandom(10,100));
+}
+iArray.sort();</pre>
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="js-q16">把两个数组合并，并删除第二个元素</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        <pre>
+function push(arr1,arr2){
+    Array.prototype.push.apply(arr1,arr2);
+    return arr1;
+}</pre>
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        <pre>
+var array1 = ['a','b','c'];
+var bArray = ['d','e','f'];
+var cArray = array1.concat(bArray);
+cArray.splice(1,1);</pre>
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="js-q17">有这样一个URL：http://item.taobao.com/item.htm?a=1&b=2&c=&d=xxx&e，请写一段JS程序提取URL中的各个GET参数(参数名和参数个数不确定)，将其按key-value形式返回到一个json结构中，如{a:'1', b:'2', c:'', d:'xxx', e:undefined}。</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        <pre>
+var url='http://item.taobao.com/item.htm?a=1&b=2&c=c1&d=xxx&e';
+function hash(url){
+    var hash=url.substr( url.indexOf('?')+1 );
+    var arr=hash.split('&');
+    return arr;
+}</pre>
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        <pre>
+function serilizeUrl(url) {
+    var result = {};
+    url = url.split("?")[1];
+    var map = url.split("&");
+    for(var i = 0, len = map.length; i < len; i++) {
+        result[map[i].split("=")[0]] = map[i].split("=")[1];
+    }
+    return result;
+}</pre>
+                    </p>
+                </figure>
+                <h2 id="other">其他</h2>
+                <figure>
+                    <figcaption id="other-q1">都使用和了解过哪些编辑器？都使用和了解过哪些日常工具？</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        了解和使用过apatana、note++、sublime、webstorm、eclipse<br>
+                        photoshop、dreamwaver、ftp工具、virtual Box、firebug、chrome调试工具
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        暂无
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="other-q2">都知道有哪些浏览器内核？开发过的项目都兼容哪些浏览器？</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        内核：webkit、gecko、trident<br>
+                        浏览器：firefox、IE、chrome、safari
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        暂无
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="other-q3">国内外的JS牛人都知道哪些？</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        John Regis
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        暂无
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="other-q4">瀑布流布局或者流式布局是否有了解</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        瀑布流布局接触过，有所了解。需要通过滚动事件判断之前元素的绝对位置，据此判断下一个元素的放置位置。从第二行开始要设置positin:absolute
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        暂无
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="other-q5">正则表达式有系统学习过吗</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        基础的部分学习过。
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        暂无
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="other-q6">Node.js是否有过尝试？到什么程度？说说个人理解的看法？</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        尝试过，用node.js开发过一个简单的新闻管理系统，前后端都基于node。<br>
+                        node的开发关键在于路由的控制和中间件的使用，路由的方式较php更优雅。
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        暂无
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="other-q7">HTML5都有哪些新的JS的API？</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        canvas
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        暂无
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="other-q8">前端优化知识都知道哪些？</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        文件压缩、文件合并、浏览器缓存、通过base64较少网络请求、预加载、懒加载
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        暂无
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="other-q9">基础算法题（如快速排序，能否一两句说说重要的核心原理或者数组消重等）。</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        在遍历过程中进行比较，较小的调整靠前。
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        暂无
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="other-q10">常见的http状态码及含义</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        200 请求成功<br>
+                        304 请求的内容自上次访问以来没有改变<br>
+                        400 请求语义有误，无法被服务器理解<br>
+                        403 服务器拒绝执行请求<br>
+                        404 请求的资源未找到<br>
+                        500 服务器发生错误，无法完成对请求的处理。一般是服务器端代码错误所致
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        暂无
+                    </p>
+                </figure>
+                <figure>
+                    <figcaption id="other-q11">是否有接触过或者了解过重构。</figcaption>
+                    <p>
+                        <span>我的回答：</span>
+                        了解过重构，重构需要优化html结构
+                    </p>
+                    <p>
+                        <em>参考答案：</em>
+                        暂无
+                    </p>
+                </figure>
+            </div>
+        </div>
+        <!-- 侧边栏 -->
+        <aside>
+            <ul>
+                <li class="primary">
+                    <a href="#html">html</a>
+                    <ul class="sub">
+                        <li><a href="#html-q1">你做的页面在哪些流览器测试过？这些浏览器的内核分别是什么</a></li>
+                        <li><a href="#html-q2">每个HTML文件里开头都有个很重要的东西，Doctype，知道这是干什么的吗？</a></li>
+                        <li><a href="#html-q3">Quirks模式是什么？它和Standards模式有什么区别</a></li>
+                        <li><a href="#html-q4">css的布局较table布局有什么优点？</a></li>
+                        <li><a href="#html-q5">知道什么是微格式吗？谈谈理解。在前端构建中应该考虑微格式吗？</a></li>
+                        <li><a href="#html-q6">js代码上线之后开发人员经常会优化性能，从用户刷新网页开始，一次js请求一般情况下有哪些地方会有缓存处理？</a></li>
+                        <li><a href="#html-q7">一个页面上有大量的图片（大型电商网站），加载很慢，你有哪些方法优化这些图片的加载，给用户更好的体验。</a></li>
+                        <li><a href="#html-q8">你如何理解HTML结构的语义化？　</a></li>
+                        <li><a href="#html-q9">谈谈以前端角度出发做好SEO需要考虑什么？</a></li>
+                    </ul>
+                </li>
+                <li class="primary">
+                    <a href="#css">css</a>
+                    <ul class="sub">
+                        <li><a href="#css-q1">有哪项方式可以对一个DOM设置它的CSS样式？</a></li>
+                        <li><a href="#css-q2">CSS都有哪些选择器？</a></li>
+                        <li><a href="#css-q3">CSS选择器的优先级是怎么样定义的？</a></li>
+                        <li><a href="#css-q4">下面标签内的文字是什么颜色的？            </a></li>
+                        <li><a href="#css-q5">超链接访问过后hover样式就不出现的问题是什么？如何解决？</a></li>
+                        <li><a href="#css-q6">什么是Css Hack？ie6,7,8的hack分别是什么？</a></li>
+                        <li><a href="#css-q7">行内元素和块级元素的具体区别是什么？行内元素的padding和margin可设置吗？</a></li>
+                        <li><a href="#css-q8">浏览器还有默认的天生inline-block元素（拥有内在尺寸，可设置高宽，但不会自动换行），有哪些？</a></li>
+                        <li><a href="#css-q9">rgba()和opacity的透明效果有什么不同？</a></li>
+                        <li><a href="#css-q10">Sass、LESS是什么？大家为什么要使用他们？</a></li>
+                        <li><a href="#css-q11">让一个input的背景颜色变成红色</a></li>
+                     </ul>
+                </li>
+                <li class="primary">
+                    <a href="#js">javascript</a>
+                    <ul class="sub">
+                        <li><a href="#js-q1">JavaScript的数据类型都有什么？</a></li>
+                        <li><a href="#js-q2">如何判断某变量是否为数组数据类型？</a></li>
+                        <li><a href="#js-q3">已知ID的Input输入框，希望获取这个输入框的输入值，怎么做？</a></li>
+                        <li><a href="#js-q4">希望获取到页面中所有的checkbox怎么做？(不使用第三方框架)</a></li>
+                        <li><a href="#js-q5">用javascript原生代码、jQuery分别获取text的表单值、radio的表单值、h2的html内容</a></li>
+                        <li><a href="#js-q6">设置一个已知ID的DIV的html内容为xxxx，字体颜色设置为黑色(不使用第三方框架)</a></li>
+                        <li><a href="#js-q7">JavaScript DOM事件绑定的方式及其优缺点</a></li>
+                        <li><a href="#js-q8">看下列代码输出为何？解释原因</a></li>
+                        <li><a href="#js-q9">下面的代码，输出什么，foo的类型为什么</a></li>
+                        <li><a href="#js-q10">下面代码的结果</a></li>
+                        <li><a href="#js-q11">已知数组var stringArray = [“This”, “is”, “Baidu”, “Campus”]，Alert出”This is Baidu Campus”</a></li>
+                        <li><a href="#js-q12">var numberArray = [3,6,2,4,1,5]; （考察基础API）</a></li>
+                        <li><a href="#js-q13">&lt;tr&gt;&lt;td&gt;{id}&lt;/td&gt;&lt;td&gt;{name}&lt;/td&gt;&lt;/tr&gt;”中的{id}替换成10，{name}替换成Tony （使用正则表达式）</a></li>
+                        <li><a href="#js-q14">看下列代码，将会输出什么?(变量声明提升)</a></li>
+                        <li><a href="#js-q15">用js实现随机选取10--100之间的10个数字，存入一个数组，并排序。</a></li>
+                        <li><a href="#js-q16">把两个数组合并，并删除第二个元素</a></li>
+                        <li><a href="#js-q17">有这样一个URL：http://item.taobao.com/item.htm?a=1&b=2&c=&d=xxx&e，请写一段JS程序提取URL中的各个GET参数(参数名和参数个数不确定)，将其按key-value形式返回到一个json结构中，如{a:'1', b:'2', c:'', d:'xxx', e:undefined}。</a></li>
+                    </ul>
+                </li>
+                <li class="primary">
+                    <a href="#other">其它</a>
+                    <ul class="sub">
+                        <li><a href="#other-q1">都使用和了解过哪些编辑器？都使用和了解过哪些日常工具？</a></li>
+                        <li><a href="#other-q2">都知道有哪些浏览器内核？开发过的项目都兼容哪些浏览器？</a></li>
+                        <li><a href="#other-q3">国内外的JS牛人都知道哪些？</a></li>
+                        <li><a href="#other-q4">瀑布流布局或者流式布局是否有了解</a></li>
+                        <li><a href="#other-q5">正则表达式有系统学习过吗</a></li>
+                        <li><a href="#other-q6">Nodejs是否有过尝试？到什么程度？说说个人理解的看法？</a></li>
+                        <li><a href="#other-q7">HTML5都有哪些新的JS的API？</a></li>
+                        <li><a href="#other-q8">前端优化知识都知道哪些？</a></li>
+                        <li><a href="#other-q9">基础算法题（如快速排序，能否一两句说说重要的核心原理或者数组消重等）。</a></li>
+                        <li><a href="#other-q10">常见的http状态码及含义</a></li>
+                        <li><a href="#other-q11">是否有接触过或者了解过重构。</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+    </div>
+</body>
+</html>

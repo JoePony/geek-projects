@@ -1,0 +1,167 @@
+*{
+    cursor: default;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    box-sizing:border-box;
+}
+body{
+    background-color:#EFEFEF;
+}
+a{
+    color:#333;
+    cursor:pointer;
+}
+$c-theme:#3360A3;
+$c-bg:#EEE;
+@mixin fl {
+    float: left;
+}
+@mixin fr {
+    float: right;
+}
+@mixin minWidth($mw) {                               
+    @media only screen and (min-width: $mw) {  // mixin of minmum width for phone                   
+        @content;
+    }
+}
+@mixin maxWidth($mw) {                                
+    @media only screen and (max-width: $mw) {  // mixin of maxmum width for phone                  
+        @content;
+    }
+}
+@mixin ellipsis($w){  // ellipsis the extra part of a single line
+    width:$w;
+    display:block;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+header {             // the part of top
+    background-color: $c-theme;
+    color: #FFF;
+    padding: 15px 0 10px;
+    box-shadow: 0 3px 5px #888;
+    & > * {          // the title of the top
+        font-size:22px;
+        letter-spacing: 3px;
+        text-align: center;
+        text-shadow: 1px 1px 5px #FFF;
+        line-height: 1.2em;
+    }
+    sub{
+        text-shadow:none; 
+        font-size:12px;
+        margin-left:5px;
+    }
+}
+
+.wrapper {          // wrapper of main part
+    width: 90%;
+    margin: 0 auto;
+    $minW: 500px;
+    $ml: 200px;
+    position:relative;
+    z-index:0;
+    @at-root .main {                   // the main part
+        @include minWidth($minW) {
+            width: 100%;              
+            @include fl;
+            .inner {                    // the inner wrap of questions
+                margin-left: $ml+20px;    
+            }
+        }
+        h2 {                    // the primary item title 
+            font-size: 30px;
+            border-bottom: 1px solid $c-bg - 90;
+            margin: 20px 0 0px;
+        }
+        figure{                 // item of squestions list 
+            padding:10px;
+            border-bottom:1px dotted $c-bg - 50;
+            transition:all 0.2s ease;
+            &:last-child{
+                border:none;
+            }
+            &:hover{
+                background-color:$c-bg + 12;
+            }
+            figcaption {                    // question
+                font-size: 18px;
+                display: inline-block;
+            }
+            p{                  // answer
+                line-height:1.5em;
+                margin:2px 0 5px;
+            }
+            span{                   // my answer
+                color:$c-theme;
+                font-weight:bold;
+            }
+            em{                 // reference answer
+                color:#F50;
+                font-style:normal;
+                font-weight:bold;
+            }
+            pre{                    // code part if has code
+                background-color:#333;
+                color:#FFF;
+                width:80%;
+                @include maxWidth($minW){
+                    width:100%;
+                }
+                padding:5px 0 5px 10px;
+            }
+        }
+    }
+    @at-root aside {                    // index of questions in the left part
+        width: $ml;
+        @include fl;
+        margin-left: -100%;
+        padding-top:10px;
+        @include maxWidth($minW) {
+            display: none;
+        }
+        &.fixed{                // fix the aside part if scroll height over a certain heighth
+            position:fixed;
+            margin-left:0;
+        }
+        .primary{                   // the primary item
+            $lh:1.8em;
+            line-height:$lh;
+            margin-bottom:10px;
+            & > a {               
+                padding-left:5px;
+                display:inline-block;
+                font-weight:700;
+                width:100%;
+                line-height:$lh;
+                border-left: 2px solid transparent; 
+                color:$c-theme;
+            }
+            & > a:hover, &.curr a{               
+                border-color: $c-theme;
+                color:$c-theme;
+            }
+            .sub{                   // sub items
+                display:none;
+            }
+            &.curr .sub{                    // current class
+                display:block;
+            }
+            .sub li{                    // sub item
+                a{  
+                    padding-left:15px;
+                    font-size:12px; 
+                    border-left: 1px solid transparent; 
+                    @include ellipsis(98%);
+                    color:$c-theme + 80;
+                }
+                a:hover, &.curr a{         //current class
+                    border-color: $c-theme;
+                    color:$c-theme;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,1 @@
+先装ruby、再执行npm install安装插件、最后执行gulp
