@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- 后台公共模板 -->
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="/stylesheets/bootstrap.min.css" type="text/css"  rel="stylesheet" />
+    <link href="/stylesheets/admin.css" type="text/css"  rel="stylesheet" />
+    <script src="/javascripts/jquery-1.11.3.min.js"></script>
+    <title><%= title %></title>
+</head>
+<body class="admin">
+    <!-- 顶部 -->
+    <header class="clearfix">
+        <span class="fl">新闻管理系统</span>
+        <div class="fr">
+            <i>欢迎你:<%= loginName %></i>
+            <a href="/" target="_blank">首页</a>
+            <a href="/logout">退出</a>
+        </div>
+    </header>
+    <%- body %>
+    <script src="/javascripts/index.js" type="text/javascript"></script>
+</body>
+</html>
