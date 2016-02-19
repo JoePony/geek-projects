@@ -1,0 +1,579 @@
+/* 重置样式start */
+html,body,div,a,span,p,ul,li,img,header,nav,aside,form,input,em,i{
+    margin:0;
+    padding:0;
+    border:0 none;
+    font-style:normal;
+    /*outline:none;*/
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+ul,li{
+    list-style:none outside none;
+}
+input:focus, a:focus{
+    outline:none;
+}
+a{
+    color:#333;
+    text-decoration:none;
+    font-size:14px;
+}
+img{
+    vertical-align:top;             /* 消除html默认的a中img元素底部多出的几个像素 */
+}
+a:hover{
+    color:#F50;
+    text-decoration:underline;
+}
+/* 重置样式end */
+
+/* 公共样式start*/
+.w1{
+    width:1200px;
+}
+.m0a{
+    margin:0 auto;
+}
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+.theme-o{
+    color:#F50 !important;
+}
+/* 清除浮动 */
+.clearfix:after, .clearfix:before{
+    content:'.';
+    display:block;
+    visibility:hidden;
+    overflow:hidden;
+    font-size:0;
+    line-height:0;
+    width:0;
+    height:0;
+}
+.clearfix:after{
+    clear:both;
+}
+.clearfix{
+    zoom:1;
+}
+.clear{
+    clear:both;
+}
+html{
+    background-color:#EFF0F0;
+    background:url(../images/hf_body_bg.png) repeat-x 0 -70px;
+}
+body{
+    font:14px/100% arial,"Hiragino Sans GB","Hiragino Sans GB W3",Simsun;
+    background-color:rgba(255,255,255,.2);
+}
+/* 公共样式end*/
+
+/* 头部 start */
+header{
+    border-bottom:1px solid #CCC;
+}
+header .hover-c:hover{
+    background:-webkit-linear-gradient(top,#F7F7F7,#F7F7F7);
+    background:-moz-linear-gradient(top,#F7F7F7,#F7F7F7);
+}
+header a.common{
+    display:inline-block;
+    font:12px/60px 'Tahoma';
+    color:#999;
+    padding:0 10px;
+}
+header a.common:hover{
+    text-decoration:none;
+}
+header .weather{
+    margin-left:80px;
+}
+header .weather a:nth-child(2){
+    background-position:0 16px;
+    background-repeat:no-repeat;
+    padding-left:30px;
+}
+header .weather span{
+    display:inline-block;
+    width:5px;
+    height:10px;
+    position:relative;
+}
+header .weather .decoration-arrow{
+    position:absolute;
+    top:-5px;
+    left:-6px;
+    z-index:1;
+}
+header .weather i.decoration-arrow{
+    top:-7px;
+    border-top-color:#F7F7F7 !important;
+    z-index:2;
+}
+header .date a span{
+    display:inline-block;
+}
+header .date a span:nth-child(1){
+    background:url(../images/index_widthlg.png) no-repeat -20px -62px;
+    width:24px;
+    text-align:center;
+}
+header .shortcuts{
+    margin-right:10px;
+}
+header .shortcuts a{
+    background:url(../images/index_widthlg.png) no-repeat -30px -110px;
+    padding:0 9px 0 33px;
+}
+header .shortcuts a:hover{
+    background:url(../images/index_widthlg.png) no-repeat -30px -110px #F7F7F7;
+}
+header .shortcuts a:nth-child(2){
+    background-position:-96px -108px;
+}
+header .shortcuts a:nth-child(3){
+    background-position:-162px -109px;
+}
+header .ad-list{
+    width:220px;
+    height:60px;
+    position:relative;
+}
+header .ad-list li.hidden, header .ad-list li+li{
+    display:none;
+}
+header .ad-list li.vis{
+    display:block;
+    transition:all ease 1s;
+}
+/*@-webkit-keyframes slide{   //顶部幻灯广告可以用js更好地实现
+    0%{ background-image:url(../images/tmp/topAD1.jpg); }
+    33%{ background-image:url(../images/tmp/topAD2.jpg); }
+    66%{ background-image:url(../images/tmp/topAD3.jpg); }
+}
+@-moz-keyframes slide{
+    0%{ background-image:url(../images/tmp/topAD1.jpg); }
+    33%{ background-image:url(../images/tmp/topAD2.jpg); }
+    66%{ background-image:url(../images/tmp/topAD3.jpg); }
+}
+@keyframes slide{
+    0%{ background-image:url(../images/tmp/topAD1.jpg); }
+    33%{ background-image:url(../images/tmp/topAD2.jpg); }
+    66%{ background-image:url(../images/tmp/topAD3.jpg); }
+}*/
+
+/* 头部 end */
+
+/* 导航 start */
+nav{
+   border-top:2px solid #099E6A;
+   margin:25px auto 0;
+}
+nav ul{
+    background-color:#FCFCFC;
+}
+nav li{
+    position:relative;
+    width:9.09090909%;
+}
+nav a{
+    font:16px/38px "Microsoft Yahei";
+    display:inline-block;
+    text-align:center;
+    width:100%;
+}
+nav a:hover{
+    color:#099E6A;
+    text-decoration:none;
+}
+nav li.curr a{
+    background-color:#099E6A;
+    color:#FFF;
+}
+nav li:after{                                     /* 导航栏目右侧竖线 */    
+    content:'';
+    height:20px;
+    position:absolute;
+    right:0;
+    top:50%;
+    margin-top:-10px;
+    border-right:1px solid rgb(234,234,234);
+}
+nav li:last-child:after,nav li.curr:after{        /* 最后一个栏目不加右侧竖线 */  
+    content:none;
+}
+/* 导航 end */
+
+/* 搜索 start */
+.search-wrap{
+    padding:42px 0 0 166px;
+    font-size:0;
+    position:relative;
+}
+.search-wrap .kw-wrap{                            /* 搜索框 */ 
+    border:1px solid transparent;
+    border-color:#8A8A8A;
+    width:574px;
+    height:38px;
+    display:inline-block;
+    background-color:#FFF;
+    box-shadow:0 0 3px #DDD inset;
+    margin-left:15px;
+    position:relative;
+    z-index:1;
+}
+.search-wrap .kw-wrap .kw-more{                    /* 搜索框内的更多 */ 
+    height:38px;
+    display:inline-block;
+    position:absolute;
+    top:0;
+    padding-left:10px;
+    font:12px/38px simsun;
+    letter-spacing:1px;
+}
+.search-wrap .kw-wrap .more-category{              /* 搜索框内的更多下拉菜单 */ 
+    position:absolute;
+    top:36px;
+    left:-1px;
+    background-color:#FFF;
+    border:1px solid #8A8A8A;
+    border-top:none;
+    z-index:1;
+    display:none;
+}
+.search-wrap .more-category a{
+    font-size:12px;
+    font-family:Simsun;
+    line-height:26px;
+    display:block;
+    min-width:55px;
+    padding-left:10px;
+}
+.search-wrap .more-category a:hover,.search-wrap .more-category a.curr{
+    background-color:#F1F1F1;
+}
+.search-wrap .kw-wrap .kw-more i, .decoration-arrow{   
+    width:0;
+    height:0;
+    border:4px solid #adadad;             /* 搜索框内的更多右侧的小三角箭头 */
+    border-style:solid dashed solid;
+    border-left-color:transparent;
+    border-right-color:transparent;
+    border-bottom:0 none;
+    margin:10px 0 0 5px;
+    display:inline-block;
+    position:relative;
+    top:-2px;
+}
+.search-wrap .kw-wrap .kw-more i.curr{     /* 点击时箭头旋转180 */ 
+    transform:rotate(-180deg);
+    transition:all .3s ease-in-out;
+}
+.search-wrap .kw-wrap a:hover{
+    text-decoration:none;
+}
+.search-wrap .kw{
+    width:448px;
+    height:28px;
+    font:16px/28px Arial;
+    margin:4px 30px 0 60px;
+}
+.search-wrap .btn{
+    width: 120px;
+    height: 38px;
+    font:bold 16px Arial;
+    border:1px solid #8b8b8b;
+    border-left:0 none;
+    background-color:#f7f7f7;  /* 搜索按钮渐变背景 */
+    cursor:pointer;
+}
+.search-wrap .hotKw-list{                                     /* 搜索框下热词 */
+    margin:5px 0 0 124px;
+    width:574px;
+}
+.search-wrap .hotKw-list li{
+    display:inline-block;
+    margin-right:20px;
+}
+.search-wrap .hotKw-list li:first-child{
+    margin-right:10px;
+}
+.search-wrap .hotKw-list li:last-child{
+    float:right;
+    margin-right:5px;
+}
+.search-wrap .hotKw-list a{
+    font-size:12px;
+    line-height:20px;
+    color:#555;
+}
+.search-wrap .hotKw-list a:hover{
+    color:#F50;
+}
+.search-wrap .hotKw-list li:first-child a:hover,
+.search-wrap .hotKw-list li:last-child a:hover{
+    color:#118850;
+}
+.theme-list{
+    width:auto;
+    margin:12px 0 0 80px;
+}
+.theme-list li{
+    display:inline-block;
+    width:14px;
+    height:14px;
+    border:1px solid transparent;
+    margin-left:8px;
+    padding:1px;
+    display:inline-block;
+    background-color:#099E6A;
+    cursor:pointer;
+    border-radius:5px;
+}
+.theme-list li.curr,.theme-list li:hover{          /* 主题选项按钮放大样式 */
+    transform:scale(1.3,1.3);
+}
+.theme-list li:nth-child(2){                        
+    background-color:#F50;
+}
+.theme-list li:nth-child(3){
+    background-color:#0F0;
+}
+.theme-list li:nth-child(4){
+    background-color:#05F;
+}
+/* 搜索 end */
+
+/* 主体 start */
+.main-wrapper{
+    margin-top:12px;
+}
+.main-wrapper .inner-item{
+    background-color:#FCFCFC;
+    border:1px solid #AADDBB;
+}
+aside{                                                      /* 侧边栏样式 */
+    width:280px;
+}
+aside .inner-item{
+    margin-bottom:10px;
+}
+aside .news-list{
+    line-height:1.8em;
+    padding:9px 10px;
+}
+aside .news-list a{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:inline-block;
+    width:260px;
+}
+.main{                                                      /* 主体样式 */
+    width:910px;
+}
+.main .inner-item{
+    padding:11px 25px;
+}
+.main .site-list{
+    border-bottom:1px solid #F0F0F0;
+    padding-bottom:8px;
+}
+.main .site-list:last-child{
+    border:none;
+    padding:5px 0 0;
+}
+.main .site-list li{
+    margin-right: 4px;
+    padding-bottom: 4px;
+    padding-left: 9px;
+    padding-top: 10px;
+    position: relative;
+    width: 139px;
+    position:relative;
+}
+.main .site-list-f a{
+    background:url(../images/defaultIcon.png) no-repeat 2px -200px;
+    padding-left:25px;
+}
+.main .site-list-f li:nth-child(2) a{           /* 设置站点列表小图标 */
+    background-position:2px -280px;
+}
+.main .site-list-f li:nth-child(3) a{
+    background-position:2px -320px;
+}
+.main .site-list-f li:nth-child(4) a{
+    background-position:2px -40px;
+}
+.main .site-list-f li:nth-child(5) a{
+    background-position:2px -159px;
+}
+.main .site-list-f li:nth-child(6) a{
+    background-position:2px -900px;
+}
+.main .site-list-f li:nth-child(7) a{
+    background-position:2px -480px;
+}
+.main .site-list-f li:nth-child(8) a{
+    background-position:2px -240px;
+}
+.main .site-list-f li:nth-child(9) a{
+    background-position:2px -360px;
+}
+.main .site-list-f li:nth-child(10) a{
+    background-position:2px -678px;
+}
+.main .site-list-f li:nth-child(11) a{
+    background-position:2px 0px;
+}
+.main .site-list-f li:nth-child(12) a{
+    background-position:2px -723px;
+}
+.main .site-list-f li:nth-child(13) a{
+    background-position:2px -770px;
+}
+.main .site-list-f li:nth-child(14) a{
+    background-position:2px -770px;
+}
+.main .site-list-f li:nth-child(15) a{
+    background-position:2px -817px;
+}
+.main .site-list-f li:nth-child(16) a{
+    background-position:2px -640px;
+}
+.main .site-list-f li:nth-child(17) a{
+    background-position:2px -520px;
+}
+.main .site-list-f li:nth-child(18) a{
+    background-position:2px -860px;
+}
+.main .site-list-f a:nth-child(2){
+    background:none;
+    padding-left:0;
+}
+.main .site-list a.special{                        /* 有特价活动图标的a */
+    position:relative;
+    left:5px;
+}
+.main .site-list a.special i{
+    width:34px;
+    height:30px;
+    background:url(../images/bubble.png) no-repeat -1px 0;
+    position:absolute;
+    top:-8px;
+    font-size:12px;
+    line-height:13px;
+    color:#f50;
+    padding:1px 0 0 7px;
+    text-decoration:none;
+}
+.theme,.theme:hover{
+    color:#099E6A;
+}
+/* 主体 end */
+
+/* 底部 start */
+footer{
+    margin-top:20px;
+    padding:20px 0 20px;
+    background-color:#FFF;
+    border-top:1px solid #CECECE;
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+footer .footer-logo{
+    width:228px;
+    height:28px;
+    display:inline-block;
+    background:url(../images/sprite_footer.png) no-repeat 0 0;
+    margin-right:20px;
+}
+footer li{
+    display:inline-block;
+    font:14px/28px "Microsoft YaHei";
+    margin:0 16px 0 9px;
+}
+footer a{
+    color:#555;
+}
+footer .app a{
+    display:inline-block;
+    width:70px;
+    font-size:12px;
+    background:url(../images/sprite_footer.png) no-repeat -212px -34px;
+    padding-left:30px;
+}
+footer .app a:nth-child(2){
+    background-position:0 -34px;
+    margin-left:20px;
+}
+/* 底部 end */
+
+/* 主题色样式 start */
+
+/* 导航顶部边框 */
+.theme-green nav{
+    border-color:#099E6A;
+}
+.theme-red nav{
+    border-color:#F50;
+}
+.theme-lightGreen nav{
+    border-color:#0F0;
+}
+.theme-blue nav{
+    border-color:#05F;
+}
+
+/* 导航栏栏目光标hover样式 */
+.theme-green nav a:hover{
+    color:#099E6A;
+}
+.theme-red nav a:hover{
+    color:#F50;
+}
+.theme-lightGreen nav a:hover{
+    color:#0F0;
+}
+.theme-blue nav a:hover{
+    color:#05F;
+}
+
+/* 导航栏当前栏目样式 */
+.theme-green nav li.curr a{
+    background-color:#099E6A;
+}
+.theme-red nav li.curr a{
+    background-color:#F50;
+}
+.theme-lightGreen nav li.curr a{
+    background-color:#0F0;
+}
+.theme-blue nav li.curr a{
+    background-color:#05F;
+}
+
+/* 主题选项按钮 */
+.theme-green .theme, .theme-green .theme:hover{
+    color:#099E6A;
+}
+.theme-red .theme, .theme-red .theme:hover{
+    color:#F50;
+}
+.theme-lightGreen .theme, .theme-lightGreen .theme:hover{
+    color:#0F0;
+}
+.theme-blue .theme, .theme-blue .theme:hover{
+    color:#05F;
+}
+/* 主题色样式 end */
+
+/***************************** 全部样式结束 *****************************/
