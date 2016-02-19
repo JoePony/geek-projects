@@ -1,0 +1,22 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "connect-multiparty": "^2.0.0",
+    "cookie-parser": "^1.4.0",
+    "ejs": ">= 0.0.1",
+    "express": "^2.5.8",
+    "express-session": "^1.12.1",
+    "formidable": "^1.0.17",
+    "multer": "^1.0.6",
+    "multiparty": "^4.1.2",
+    "mysql": "^2.0.0-alpha9",
+    "node-mysql": "^0.4.2"
+  },
+  "devDependencies": {
+    "csurf": "^1.8.3",
+    "jsonwebtoken": "^5.5.4",
+    "xss": "^0.2.10"
+  }
+}

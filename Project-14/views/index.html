@@ -1,0 +1,35 @@
+        <!-- 首页前端body -->
+        <!-- 顶部 -->
+        <header class="clearfix">
+            <div class="fl">
+                <a href="" class="home"></a>
+                <a href="" class="login"></a>
+            </div>
+            <div class="fr">
+                <a href="" class="search"></a>
+                <a href="" class="more"></a>
+            </div>
+        </header>
+        <!-- 导航 -->
+        <nav id="nav">
+            <ul class="clearfix">
+                <%
+                for(var i in categoryList){
+                %>
+                    <li id="<%= categoryList[i]['nameEN'] %>"<% if (categoryList[i]['nameEN']=='internet') { %> class="internet" <% } %> >
+                        <span><%= categoryList[i]['nameCH'] %></span>
+                    </li>
+                <%
+                }
+                %>
+            </ul>
+        </nav>
+        <!-- 主体 -->
+        <div class="news-wrap">
+            <ul class="news-list" id="newsList">
+            </ul>
+            <div class="loading" id="loading">
+                <div class="inner"><i></i></div>
+            </div>
+            <div class="load-more" id="loadMore">点击加载更多</div>
+        </div>

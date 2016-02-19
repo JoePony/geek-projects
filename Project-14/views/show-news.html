@@ -1,0 +1,42 @@
+    <!-- 新闻显示模板 -->
+    <%
+        //获取新闻信息
+        var title=news.title;
+        var time=new Date(news.time*1000);
+        time=time.getFullYear()+'年'+(time.getMonth()+1)+'月'+time.getDay()+'日';
+        var source=news.source;
+        var content=news.content;
+        var img=news.imgPath;
+        var category=news.category;
+    %>  
+    <!-- 顶部 -->
+    <header class="clearfix showNews-header">
+        <div class="fl">
+            <span class="back fl" id="back" title="返回"></span>
+        </div>
+        <h3 id="currCategory"><%= category %></h3>
+    </header>
+    <!-- 主体 -->
+    <div class="show-news">
+        <h2 class="title"><%= title %></h2>
+        <p class="info">
+            <span class="time"><%= time %></span>
+            <%
+            if(source!==''){
+            %>
+                <span class="source"><%= source %></span>
+            <%
+            }
+            %>
+        </p>
+        <div class="content"><%= content %></div>
+        <%
+        if(img!==''){
+        %>
+            <div class="img">
+                <img src="<%= img %>" alt="<%= title %>" />
+            </div>
+        <%
+        }
+        %>
+    </div>
