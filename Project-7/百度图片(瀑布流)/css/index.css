@@ -1,0 +1,152 @@
+/* 重置样式 start */
+html,body,div,img,form,input,ul,li,a,header,footer,p{
+    margin:0;
+    padding:0;
+    border:0 none;
+}
+ul,li{
+    list-style:none outside none;
+}
+img{
+    vertical-align:top;
+}
+a{
+    color:#333;
+    text-decoration:none;
+}
+a:focus, input:focus{
+    outline:none;
+}
+/* 重置样式 end */
+
+/* 清除浮动 start */
+.clearfix:before, .clearfix:after{
+    content:'';
+    display:block;
+    width:0;
+    height:0;
+    font-size:0;
+    line-height:0;
+    overflow:hidden;
+    visibility:hidden;
+}
+.clearfix:after{
+    clear:both;
+}
+.clearfix{
+    font-size:0;
+    zoom:1;
+}
+/* 清除浮动 end */
+
+/* 公共样式 start */
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+body{
+    background-color:#F3F2F3;
+    font-family:Arial;
+}
+/* 公共样式 end */
+
+/* 顶部 start */
+header{
+    padding-left:40px;
+    background-color:#FFF;
+    box-shadow:0 1px 5px 1px #888;
+    position:relative;
+}
+header .logo{
+    margin-top:31px;
+}
+header .search-wrap{
+    margin:20px 0 20px 18px;
+}
+header .search-wrap li{
+    float:left;
+    margin-right:19px;
+    line-height:20px;
+}
+header .search-wrap li a, header .search-wrap li span{
+    color:#555;
+    font-size:14px;
+    font-family:"Microsoft Yahei";
+}
+header .search-wrap li span{
+    font-weight:700;
+}
+header form{
+    border:1px solid #B8B8B8;
+    min-width:566px;
+}
+header form .kw{
+    width:453px;
+    height:35px;
+    font:16px/22px arial;
+    padding:0 7px;
+    border-right:1px solid #B8B8B8;;
+}
+header form .submit{
+    width:98px;
+    height:35px;
+    font:16px/30px "Microsoft Yahei";
+    cursor:pointer; 
+    background:-webkit-linear-gradient(top, #FBFBFB, #F3F3F3);
+    background:-moz-linear-gradient(top, #FBFBFB, #F3F3F3);
+    background:linear-gradient(top, #FBFBFB, #F3F3F3);
+}
+header p, header p a{
+    font-size:12px;
+    line-height:30px;
+    color:#555;
+    margin:0 5px;
+}
+header p{
+    min-width:313px;
+    position:absolute;
+    top:0;
+    right:10px;
+
+}
+/* 顶部 end */
+
+/* 主体 start */
+.container{
+    padding-left:40px;
+    position:relative;
+}
+.wrap{
+    margin-top:20px;
+}
+.wrap .item{
+    float:left;
+    box-shadow:0 0 2px 1px #EFEFEF;
+    margin:0 15px 15px 0;
+}
+.item img{
+    width:285px;
+}
+/* 主体 end */
+
+/* 底部 start */
+footer{
+    margin:23px auto 0;
+    padding:12px 0;
+    text-align:center;
+    word-spacing:7px;
+    font-size:12px;
+    background-color:#FFF;
+}
+footer *{
+    color:#999;
+}
+footer a:hover{
+    text-decoration:underline;
+}
+footer a:first-child{
+    color:#0079F4;
+}
+/* 底部 end */
