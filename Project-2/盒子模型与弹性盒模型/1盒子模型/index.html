@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型</title>
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+</head>
+<body>
+    <div class="wrap">
+        我是包装，我的总宽度是300px，但width只能设置230px，因为还要考虑padding:30px和border:5px。背景色rgb(0,255,0,1)，box-shadow:3px 3px 10px 5px #CCC;
+        <div class="box">
+            我是盒子，我的width是200px，padding是10px，border-width是5px，所以总宽度是230px。height同理。
+        </div>
+    </div>
+    <hr />
+
+    <div class="wrap wrap2">
+        我是包装，我的总宽度是300px，但width只能设置230px，因为还要考虑padding:30px和border:5px。背景色rgb(0,255,0,0.6)，box-shadow:3px 3px 5px #ccc;
+        <div class="box box2">
+            我是box-sizing:border-box盒子，我的width是200px，padding是10px，border-width是5px，但是总宽度还是200px。height同理。
+        </div>
+    </div>
+</body>
+</html>

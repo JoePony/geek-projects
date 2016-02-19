@@ -1,0 +1,81 @@
+/* 重置样式 start */
+html,body,div,a,p{
+    margin:0;
+    padding:0;
+    font-size:12px;
+}
+/* 重置样式 end */
+body{
+    background:url(../images/bg.gif) repeat 0 0;
+    font-family:"Microsoft Yahei";
+}
+.wrap{
+    width:750px;
+    padding:20px;
+    background-color:#FFF;
+    margin:10px auto;
+    border-radius:40px;
+}
+table{
+    width:735px;
+}
+table,caption{
+    border-collapse:collapse;
+}
+caption{
+    font:22px/30px "Microsoft Yahei";
+    color:#333;
+    letter-spacing:2px;
+    padding:10px 0;
+}
+td,th{
+    border:1px solid #DDD;
+}
+thead th{
+    text-align:left;
+    font-weight:bold;
+    padding:5px 0 5px 10px;
+    background-color:#EEE;
+    font-size:14px;
+    letter-spacing:2px;
+}
+tbody th{
+    text-align:right;
+    font-weight:normal;
+    width:20%;
+    color:#444;
+    font-weight:bold;
+}
+tbody td{
+    padding:3px;
+    font-family:Arial;
+}
+thead .notice{
+    padding:7px 10px 10px;
+}
+textarea{
+    width:99%;
+}
+.red{
+    color:#F00;
+}
+.bold{
+    font-weight:bold;
+    margin:10px 0 5px;
+}
+.bold2{
+    margin:10px 0 5px;   
+}
+.bold2 span{
+    font-weight:bold;
+}
+.center{
+    text-align:center;
+    color:#555;
+}
+input[type=submit]{
+    margin:0 5px;
+}
+input[type=submit]:hover{
+    cursor:pointer;
+}

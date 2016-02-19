@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型测试实例</title>
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+</head>
+<body>  
+    <div class="container">
+        <h1>盒子模型测试实例</h1>
+        <!-- 多列实例 -->
+        <h2>1、多列：3列、边框dashed、边框宽度3px、颜色#F00、间距50px</h2>
+        <div class="wrap wrap1">
+                世界名企捐助赴欧难民 高盛谷歌等捐款超百万美元
+            　　正值欧洲努力应对逃离战乱的大量难民之际，一些世界知名企业和个人也向难民伸出援手。
+            　　谷歌计划向相关组织提供110万美元，为难民提供所需的实物、水、医疗用品等必需品。高盛集团向联合国难民事务高专员办事处（UNHCR）捐款300万美元，帮助逃离战乱的赴欧移民。奥迪表示捐款110万美元支援德国紧急援助计划。
+            　　UNHCR表示，截至目前的6天时间内，已收到1700万美元的企业和个人捐款。UNHCR称Zara、爱立信、沃尔沃等企业也将提供帮助或正在商讨中。 谷歌计划向相关组织提供110万美元，为难民提供所需的实物、水、医疗用品等必需品。高盛集团向联合国难民事务高专员办事处（UNHCR）捐款300万美元，帮助逃离战乱的赴欧移民。奥迪表示捐款110万美元支援德国紧急援助计划。
+            　　UNHCR表示，截至目前的6天时间内，已收到1700万美元的企业和个人捐款。UNHCR称Zara、爱立信、沃尔沃等企业也将提供帮助或正在商讨中。
+        </div>
+        <!-- 居中实例 -->
+        <h2>2、box盒子内图片水平垂直居中<sup>可能存在firefox的版本bug引起的图片显示问题</sup></h2>
+        <div class="wrap wrap2">
+            <!-- img外多加一个div,因为可能存在firefox的版本bug引起的图片显示问题 -->
+            <div>
+                <img src="./images/test.jpeg" width="300" alt="测试box居中图片">
+            </div>
+        </div>
+        <!-- box实例1 -->
+        <h2>3、box</h2>
+        <div class="wrap wrap3 wrap3-1">
+            <div class="inner inner1">1<br />box-flex:1</div>
+            <div class="inner inner2">2<br />box-flex:1</div>
+            <div class="inner inner3">3<br />box-flex:1</div>
+        </div>
+        <!-- flex实例2 -->
+        <h2>4、flex</h2>
+        <div class="wrap wrap3 wrap3-2">
+            <div class="inner inner1">1<br />flex:1</div>
+            <div class="inner inner2">2<br />flex:2</div>
+            <div class="inner inner3">3<br />flex:3</div>
+        </div>
+        <!-- box实例3 -->
+        <h2>5、box</h2>
+        <div class="wrap wrap3 wrap3-3">
+            <div class="inner inner1">div1<br />box-flex:1</div>
+            <div class="inner inner2">div2<br />box-flex:2，maring:0 30px <br/>则div2的宽度=(总宽度-div3宽度-60px)*2/3</div>
+            <div class="inner inner3">div3<br />不设置box-flex，指定width:200px</div>
+        </div>
+        <!-- box实例4 -->
+        <h2>6、box-orient:vertical</h2>
+        <div class="wrap wrap3 wrap3-4">
+            <div class="inner inner1">div1</div>
+            <div class="inner inner2">div2</div>
+            <div class="inner inner3">div3</div>
+        </div>
+        <!-- box实例5 -->
+        <h2>7、box-direction:reverse</h2>
+        <div class="wrap wrap3 wrap3-5">
+            <div class="inner inner1">div1</div>
+            <div class="inner inner2">div2</div>
+            <div class="inner inner3">div3</div>
+        </div>
+        <!-- box实例5 -->
+        <h2>8、box-align:</h2>
+        <p class="wrap3-6-p">
+            <input type="radio" name="align" id="start" value="start" checked onclick="document.getElementById('wrap3-6').className=''+'wrap wrap3 wrap3-6'+' '+this.value">
+            <label for="start">start</label>
+            <input type="radio" name="align" id="end" value="end" onclick="document.getElementById('wrap3-6').className=''+'wrap wrap3 wrap3-6'+' '+this.value">
+            <label for="end">end</label>
+            <input type="radio" name="align" id="center" value="center" onclick="document.getElementById('wrap3-6').className=''+'wrap wrap3 wrap3-6'+' '+this.value">
+            <label for="center">center</label>
+            <input type="radio" name="align" id="baseline" value="baseline" onclick="document.getElementById('wrap3-6').className=''+'wrap wrap3 wrap3-6'+' '+this.value">
+            <label for="baseline">baseline</label>
+            <input type="radio" name="align" id="stretch" value="stretch" onclick="document.getElementById('wrap3-6').className=''+'wrap wrap3 wrap3-6'+' '+this.value">
+            <label for="stretch">stretch</label>
+        </p>
+        <div class="wrap wrap3 wrap3-6" id="wrap3-6">
+            <div class="inner inner1">div1 height:100px;</div>
+            <div class="inner inner2">div2 line-height:200px; height:200px;</div>
+            <div class="inner inner3">div3 height:300px;</div>
+        </div>
+    </div>
+</body>
+</html>

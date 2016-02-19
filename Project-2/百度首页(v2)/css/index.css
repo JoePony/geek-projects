@@ -1,0 +1,222 @@
+/* 重置样式 start */
+html,body,div,a,img,input,p,span,ul,li{
+    margin:0;
+    padding:0;
+    border:0 none;
+}
+body{
+    background-color:#FFF;
+    font:12px Arial;
+}
+ul,li{
+    list-style:none outside none;
+}
+a{
+    color:#0000CC;
+}
+a:focus, input:focus{
+    outline:none;
+}
+/* 重置样式 end */
+
+/* 清除浮动 start */
+.clearfix:before, .clearfix:after{
+    content:".";
+    width:0;
+    height:0;
+    font-size:0;
+    line-height:0;
+    display:block;
+    visibility:hidden;
+    overflow:hidden;
+}
+.clearfix:after{
+    clear:both;
+}
+.clearfix{
+    zoom:1;
+}
+/* 清除浮动 end */
+
+.wrap{
+    min-height:600px;
+    _height:600px;
+    min-width:810px;
+    position:relative;
+}
+.header{
+    padding:24px 12px 0 0;
+}
+.header ul{
+    float:right;
+}
+.header li{
+    float:left;
+    margin-left:20px;
+}
+.header li.setting{
+    position:relative;
+}
+.header li.setting ul{
+    position:absolute;
+    top:23px;
+    left:-22px;
+}
+.header .extention{
+    display:none;
+}
+.header li.setting:hover .extention{
+    display:block;
+}
+.header .nav a{
+    font-size:13px;
+    font-weight:bold;
+    color:#333;
+}
+.header .nav a:hover{
+    color:#00C;
+}
+.header .extention_arrow{
+    position:absolute;
+    top:13px;
+    left:8px;
+    z-index:2;
+}
+.header .extention_arrow em, .header .extention_arrow i{
+    border-style: dashed dashed solid;
+    border-width: 5px;
+    border-color:transparent;
+    _border:0 none;
+    display: block;
+    width:0;
+    position:absolute;
+}
+.header .extention em{
+    border-bottom-color:#D8D8D8;
+    top:0;
+}
+.header .extention i{
+    border-bottom-color:#FFF;
+    top:1px;
+}
+.header .extention_list{
+    width:70px;
+    text-align:center;
+    border:1px solid #D1D1D1;
+    box-shadow:1px 1px 5px 0 #D1D1D1;
+}
+.header .extention_list li{
+    margin-left:0;
+    float:none;
+}
+.header .extention_list a{
+    display:block;
+    line-height:25px;
+    font-size:12px;
+    font-weight:normal;
+    text-decoration:none;
+    color:#333;
+    _display:inline-block;
+    _width:70px;
+}
+.header .extention_list a:hover{
+    background-color:#38F;
+    color:#FFF;
+}
+.header .nav a.normal{
+    font-weight:normal;
+}
+.header .nav a.more{
+    background-color:#3388FF;
+    color:#FFF;
+    text-decoration:none;
+    line-height:16px;
+    padding:3px 5px;
+}
+.search_container{
+    text-align:center;
+    padding-top:20px;
+}
+.search_form{
+    width:645px;
+    margin:22px auto 0;
+}
+.search_form .kw_wrap{
+    border:1px solid #F00;
+    border-width:1px 0 1px 1px;
+    border-color:#B8B8B8 transparent #CCCCCC #B8B8B8;
+    height:34px;
+    display:inline-block;
+    float:left;
+    position:relative;
+}
+.search_form .kw_wrap input{
+    width:500px;
+    height:22px;
+    margin:6px 34px 0 7px;
+    font:16px/18px Arial;
+}
+.search_form .cross{
+    width:34px;
+    height:34px;
+    font:30px/34px Arial;
+    color:#EEE;
+    position:absolute;
+    top:0;
+    right:0;
+    background:url(../images/quickdelete.png) center 11px no-repeat;
+    text-decoration:none;
+    display:none;
+}
+.search_form .kw_wrap:hover{
+    border-color:#4791FF transparent #4791FF #4791FF;    
+}
+.search_form .kw_wrap:hover .cross{
+    display:block;
+}
+.search_form .cross:hover{
+    cursor:pointer;
+    background-position:center -23px;
+}
+.search_form .btn_wrap{
+    vertical-align:bottom;
+    float:left;
+}
+.search_form .search_btn{
+    width:100px;
+    height:36px;
+    line-height:36px;
+    font-size:15px;
+    letter-spacing:1px;
+    background-color:#3385FF;
+    color:#FFF;
+}
+.search_form .search_btn:hover{
+    cursor:pointer;
+    background-color:#337aFF;
+    box-shadow:1px 1px 1px 0 #DDD;
+}
+.footer{
+    position:absolute;
+    bottom:44px;
+    width:100%;
+    text-align:center;
+}
+.footer .line1{
+    margin:16px 0 5px;
+}
+.footer .line1 a{
+    margin:0 10px;
+}
+.footer .line2, .footer .line2 a{
+    color:#555;
+}
+.footer .line2 i{
+    width:14px;
+    height:17px;
+    display:inline-block;
+    background:url(../images/icons.png) 0 0 no-repeat;
+    position:relative;
+    top:3px;
+    _top:0;
+}

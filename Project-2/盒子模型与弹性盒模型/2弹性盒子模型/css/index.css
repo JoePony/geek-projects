@@ -1,0 +1,196 @@
+/* 重置样式 start */
+html,body,div,h2{
+    margin:0;
+    padding:0;
+}
+/* 重置样式 end */
+body{
+    text-align:center;
+    font-family:"Microsoft Yahei";
+    color:#333;
+}
+/* 公用 */
+.container{
+    width:85%;
+    margin:0 auto;
+}
+.wrap{
+    width:100%;
+    border:6px solid #888;
+    margin:5px 0 50px;
+    padding:10px;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    text-align:left;
+}
+h2{
+    margin-top:30px;
+    text-align:left;
+}
+h2 sup{
+    font-size:12px;
+    color:#F00;
+}
+
+/* 多列实例样式 */
+.wrap1{
+    -webkit-column-count:3;
+    -moz-column-count:3;
+    column-count:3;
+
+    -webkit-column-rule-style:dashed;
+    -moz-column-rule-style:dashed;
+    column-rule-style:dashed;
+
+    -webkit-column-rule-width:3px;
+    -moz-column-rule-width:3px;
+    column-rule-width:3px;
+
+    -webkit-column-rule-color:#F00;
+    -moz-column-rule-color:#F00;
+    column-rule-color:#F00;
+
+    -webkit-column-gap:50px;
+    -moz-column-gap:50px;
+    column-gap:50px;
+    text-indent:2em;
+}
+
+/* 居中实例样式 */
+.wrap2{
+    display:-webkit-box;
+    display:-moz-box;
+    display:box;
+
+    -webkit-box-pack:center;
+    -moz-box-pack:center;
+    box-pack:center;
+
+    -webkit-box-align:center;
+    -moz-box-align:center;
+    box-align:center;
+
+    height:300px;
+}
+
+/* box实例样式1 */
+.wrap3{
+    padding:0;
+    display:-webkit-box;
+    display:-moz-box;
+    display:box;
+}
+.wrap3 .inner{
+    -webkit-box-flex:1;
+    -moz-box-flex:1;
+    box-flex:1;
+}
+.wrap3 .inner1{
+    background-color:#B4F1B4;
+    height:100px;
+}
+.wrap3 .inner2{
+    background-color:#38A1CE;
+    height:100px;
+}
+.wrap3 .inner3{
+    background-color:#F00;
+    height:150px;
+}
+
+/* flex实例样式2 */
+.wrap3-2{
+    display:-webkit-flex;
+    display:-moz-flex;
+    display:felx;
+}
+.wrap3-2 .inner1{
+    -webkit-flex:1;
+    -moz-flex:1;
+    flex:1;
+}
+.wrap3-2 .inner2{
+    -webkit-flex:2;
+    -moz-box-flex:2;   /* firefox对-moz-felx支持不太好 */
+    flex:2;
+}
+.wrap3-2 .inner3{
+    -webkit-flex:3;
+    -moz-box-flex:3;
+    flex:3;
+}
+
+/* flex实例样式3 */
+.wrap3-3 .inner1{
+    -webkit-box-flex:1;
+    -moz-box-flex:1;
+    box-flex:1;
+}
+.wrap3-3 .inner2{
+    -webkit-box-flex:2;
+    -moz-box-flex:2;
+    box-flex:2;
+    margin:0 30px;
+}
+.wrap3-3 .inner3{
+    width:200px;
+}
+
+/* box-orient实例样式4 */
+.wrap3-4{
+    -webkit-box-orient:vertical;
+    -moz-box-orient:vertical;
+    box-orient:vertical;
+}
+
+/* box-direction实例样式4 */
+.wrap3-5{
+    -webkit-box-direction:reverse;
+    -moz-box-direction:reverse;
+    box-direction:reverse;
+}
+
+/* box-align实例样式4 */
+.wrap3-6 .inner{
+    text-align:center;
+    color:#FFF;
+}
+.wrap3-6 .inner1{
+    height:100px;
+}
+.wrap3-6 .inner2{
+    line-height:200px;
+    height:200px;
+}
+.wrap3-6 .inner3{
+    height:300px;
+}
+.wrap3-6-p{
+    text-align:left;
+}
+.start{
+    -webkit-box-align:start;
+    -moz-box-align:start;
+    box-align:start;
+} 
+.end{
+    -webkit-box-align:end;
+    -moz-box-align:end;
+    box-align:end;
+}
+.center{
+    -webkit-box-align:center;
+    -moz-box-align:center;
+    box-align:center;
+} 
+.baseline{
+    -webkit-box-align:baseline;
+    -moz-box-align:baseline;
+    box-align:baseline;
+} 
+.stretch{
+    -webkit-box-align:stretch;
+    -moz-box-align:stretch;
+    box-align:stretch;
+}

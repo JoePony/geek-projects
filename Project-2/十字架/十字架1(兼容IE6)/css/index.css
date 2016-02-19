@@ -1,0 +1,89 @@
+/* 重置样式 start */
+html,body,div,img,h1{
+    margin:0;
+    padding:0;
+    border:0 none;
+    font-family:"Microsoft Yahei";
+}
+/* 重置样式 end */
+
+/* 定义清除浮动 start */
+.clearfix:before, .clearfix:after{
+    content:".";
+    width:0;
+    height:0;
+    display:block;
+    visibility:hidden;
+    font-size:0;
+    line-height:0;
+    overflow:hidden;
+}
+.clearfix:after{
+    clear:both;
+}
+.clearfix{
+    zoom:0;
+}
+/* 定义清除浮动 end */
+
+h1.title{
+    color:#1CB3A8;
+}
+h1.title sup{
+    color:#F40;
+    font-size:16px;
+}
+.wrap{
+    width:320px;
+    height:320px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:-160px;
+    margin-left:-160px;
+    text-align:center;
+}
+.wrap .inner{
+    width:100px;
+    height:100px;
+    box-shadow:3px 5px 4px 4px #DDD;
+}
+.wrap .inner:hover{
+    box-shadow:3px 5px 4px 4px #AAA;
+    cursor:pointer;
+}
+.wrap .inner1{
+    background-color:#FFEC00;
+    margin:0 auto;    
+}
+.wrap .inner2{
+    background-color:#0F0;
+    float:left;
+}
+.wrap .inner3{
+    margin:0 10px;
+    box-shadow:none;
+    float:left;
+    text-align:center;
+}
+.wrap .inner3 img{
+    width:54px;
+    height:50px;
+    position:relative;
+    top:50%;
+    margin-top:-25px;
+}
+.wrap .inner4{
+    background-color:#F50;
+    float:left;
+}
+.wrap .inner5{
+    background-color:#7272FB;
+    margin:0 auto;
+}
+.wrap .line2{
+    margin:10px 0;
+}
+.wrap .inner3:hover{
+    box-shadow:-2px -2px 8px 4px #AAA inset;
+}
