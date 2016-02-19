@@ -1,0 +1,81 @@
+/* 重置样式 start */
+body,table,tr,th,td,caption,div,h1{
+    margin:0;
+    padding:0;
+    border:0 none;
+}
+/* 重置样式 end */
+table{
+    border-collapse:collapse;
+    border:1px solid #DDD;
+    text-align:center;
+    width:700px;
+    margin:80px auto 0;
+}
+.title{
+    font:20px/45px "Microsoft Yahei";
+    letter-spacing:0.5em;
+    border-color:#BBB;
+    color:#333;
+}
+.thead_i{
+    background-color:#EEE;
+}
+td,th{
+    border:1px solid #DDD;
+    width:55px;
+    vertical-align:middle;
+    overflow:hidden;
+    font-weight:normal;
+    font-family:"Microsoft Yahei";
+}
+thead th{
+    width:133px;
+    height:35px;
+    color:#330;
+    background-color:#EEFFEE;
+    font-size:15px;
+}
+td{
+    padding:4px 10px;
+    font-size:14px;
+}
+td:hover{
+    background-color:#ffffe1;
+    cursor:ne-resize;
+}
+td.during{
+    font-family:Arial;
+    font-size:13px;
+    background-color:#ffffe1;
+}
+td.special{
+    letter-spacing:3em;
+    font-weight:bold;
+    font-family:"Microsoft Yahei";
+    color:#333;
+}
+.thead_i_special{
+    width:0;
+}
+.diagonal{
+    border-top:35px solid #EEFFEE;
+    border-left:100px solid #ffffe1;
+    position:relative;
+    font-size:14px;
+}
+.day{
+    position:absolute;
+    top:-32px;
+    _top:3px;
+    right:0;
+    font-weight:normal;
+    width:40px;
+}
+.time{
+    position:absolute;
+    bottom:-2px;
+    right:52px;
+    font-weight:normal;
+    width:40px;
+}

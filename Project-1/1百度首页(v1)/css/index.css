@@ -1,0 +1,154 @@
+/* 重置样式 start */
+html,body,div,ul,li,p,a,span,img,form,input,h2{
+    margin:0;
+    padding:0;
+    border:0 none;
+    font-size:12px;
+    outline:0 none;
+}
+body{
+    text-align:center;
+    font:12px arial;
+}
+.wrap{
+    position:relative;
+    height:100%;
+    min-height:600px;
+}
+ul{
+    list-style:none outside none;
+}
+a{
+    text-decoration:none;
+    color:#333;
+}
+/* 重置样式 end */
+
+/* 定义清除浮动 start */
+.clearfix:before, .clearfix:after {
+    content: '.';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+/* 定义清除浮动 end */
+
+/* 页面样式 strat */
+.search_wrap{
+    width:650px;
+    margin:40px auto 0;
+}
+.search_category{
+    margin:22px 0 5px;
+}
+.search_form{
+    width:642px;
+    text-align:left;
+    font-size:0;
+}
+.search_category li{
+    margin-left:18px;
+}
+.search_category a{
+    font-size:14px;
+    text-decoration:underline;
+    color:#0000CC;
+}
+.search_category a:hover{
+    color:#0078ff;
+}
+.search_category .curr{
+    text-decoration:none;
+    font-size:14px;
+    font-weight:bold;
+}
+.search_category li{
+    float:left;
+}
+.search_form .kw_wrap, .search_btn_wrap{
+    display:inline-block;
+    float:left;
+}
+.search_form .kw_wrap{
+    height:34px;
+    width:540px;
+    border:1px solid #B8B8B8;
+    position:relative;
+}
+.search_form .kw_wrap:hover{
+    border-color:#3385FF;
+}
+.search_btn_wrap{
+    height:36px;
+}
+.search_form .kw_wrap .kw{
+    width:512px;
+    margin:7px 0 0 7px;
+    font:16px Arial;
+}
+.search_form .voice_s{
+    position:absolute;
+    right:2px;
+    top:7px;
+    opacity:0.6;
+}
+.search_form .voice_s:hover{
+    opacity:0.8;
+}
+.search_btn{
+    height:36px;
+    cursor:pointer;
+    letter-spacing:1px;
+    color:#FFF;
+    background-color:#3385FF;
+    font-size:15px;
+    width:100px;
+}
+.search_btn:hover{
+    background-color:#3385EE;
+    box-shadow:1px 1px 1px #DDD;
+}
+.footer_wrap{
+    position:absolute;
+    bottom:40px;
+    left:0;
+    text-align:center;
+    width:100%;
+}
+.footer{
+    width:700px;
+    margin:0 auto;
+}
+.footer a{
+    text-decoration:underline;
+}
+.footer .about a{
+    margin:0 10px;
+}
+.footer .copyright{
+    margin-top:5px;
+    line-height:22px;
+}
+.footer .copyright *{
+    color:#666;
+}
+.footer .copyright .icon{
+    background:url(../images/icons.png) no-repeat 0 0;
+    width:14px;
+    height:17px;
+    display:inline-block;
+    position:relative;
+    top:3px;
+    left:2px;
+}
+/* 页面样式 end */
