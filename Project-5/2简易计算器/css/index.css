@@ -1,0 +1,41 @@
+body {
+    font-family: "Microsoft Yahei";
+    background-color: #FEFEFE;
+}
+.container .form-horizontal{
+    position:absolute;
+    top:50%;
+    transform:translate(0,-50%);                   /* 界面垂直居中 */
+    min-width:150px;                               /* 设置最小宽度防止小视口时变形 */
+}
+.container .characters{
+    padding:10px 0 0 5px !important;               /* 重置bootstrap样式 */
+}
+@media only screen and (max-width:992px){
+    .container .characters{
+        padding-top:0 !important;                  /* 响应式样式 */
+    } 
+}
+input,label{
+    transition:all .3s ease-in-out;
+}
+.container [class*='col-']{                        /* 重置bootstrap样式 */
+    padding-left:0;
+}
+.container .has-success [type='number']{           /* 重置bootstrap边框颜色 */
+    border-color:#DDD;
+}
+.container .has-success [type='number']:focus{     /* 重置bootstrap边框颜色 */
+    border-color:#888;
+}
+.container .form-group > div[class*='col-']{       /* 重置bootstrap样式 */
+    padding-left:0;
+    padding-right:0;
+}
+.container .heip-block{                            /* 输出结果样式 */
+    min-height:25px;
+    color:#F00;
+    font-size:16px;
+    margin-bottom:5px;
+}
+

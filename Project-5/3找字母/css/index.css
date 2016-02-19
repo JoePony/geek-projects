@@ -1,0 +1,26 @@
+body{
+    background-color:#FEFEFE;  
+    font-family:"Microsoft Yahei";
+}
+h1{                                            /* 重置bootstrap样式 */
+    font-size:20px;
+    margin-bottom:30px;
+    letter-spacing:6px;
+}
+label{
+    font-weight:100;
+}
+.container .form-group{                        /* 重置bootstrap样式 */
+    margin-bottom:0;
+}
+.container .wrapper{
+    position:absolute;
+    left:0;
+    top:50%;
+    transform:translate(0,-80%);               /* 做到接近垂直居中效果 */
+}
+.container .help-block{
+    min-height:70px;
+    font-size:16px;
+    color:#F00;
+}

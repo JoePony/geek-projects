@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" text="text/css" href="./css/index.css" />
+    <title>找字母</title>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper col-lg-4 col-lg-offset-4">
+            <h1 class="text-center">找到出现最多的字母</h1>
+            <div class="form-group">
+                <label class="control-label">给定数组：</label>   
+                <p>["a"，"x"，"b"，"d"，"m"，"a"，"k"，"m"，"p"，"j"，"a"]</p>
+            </div>
+            <span class="help-block" id="helpBlock"></span>
+            <div class="form-group">
+                <button class="btn btn-success btn-lg center-block" onClick="seek()">开 始 找</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./js/main.js"></script>
+
+//     <script>
+
+//         // var arr = ['a','x','b','d','m','a','k','m','p','j','a'];
+//         var arr = ['x','a','b','a'];
+//         var str=arr.join(''); // str = axba  [{,,[0]},]
+//         var arrN=[];
+//         arr.forEach(function(v,i){ 
+//             var k=0; // 次数计数器
+        
+//             var oItem={};
+//             oItem.位置=[];
+//             // var position=str.indexOf(v);
+//                 // console.log(str.indexOf(v));
+//             while(str.indexOf(v) != -1){
+//                 k++;
+//                 if(v in arrN ){
+//                     arrN[v].次数=k;
+//                     arrN[v].位置.push(str.indexOf(v));
+//                 }else{
+//                     oItem.元素=v;
+//                     oItem.次数=k;
+//                     oItem.位置.push(str.indexOf(v));
+//                 }
+//                 arrN[v]=(oItem);
+//                 str=str.replace(v,'*');
+//                 // console.log(str.indexOf(v));
+
+//             }
+//             // while(str.indexOf(v) != -1){  // 
+//             //     k++;
+
+//             //     var m=0;
+//             //     // arrN.forEach(function(oExisted){
+//             //     // })
+//             //     // for(var n=0;n<arrN.length;n++){
+
+//             //     //     if(v in arrN[i]){
+//             //     //         oExisted.次数=k;
+//             //     //         oExisted.位置.push(i);
+//             //     //         break;
+//             //     //     }
+//             //     //     m++;
+//             //     // }
+//             //     if(m==arrN.length || true){
+//             //         oItem.元素=v;
+//             //         oItem.次数=k;
+//             //         oItem.位置.push(i);
+//             //     }
+//             //     str=str.replace(v,'*');
+//             // }
+//             // var k=0;
+//             // if(str.indexOf(v) !== -1){
+//             //     k++;
+//             //     arrN[j]={元素:v,次数:k};
+//             //     arrN[j].位置.push(i);
+//             // }
+//             // j++;
+//             // a在str出现的位置x     a,x写入 [{元素:a , 位置:[0,2,3] },{},{s}]  
+//             // 如果a继续出现，i++,  i写入 [{位置:x,次数:i},{}]
+//         })
+// //         var obj={};
+
+// //         // console.log(arr.splice(1,1));
+// //         var str=arr.join('');
+// //         var x;
+// //         arr.forEach(function(v,i){
+// //             var r=str.match(v);
+// //             // if(r[0] in obj){
+              
+// //                 obj[v]=r[0];
+// //                 obj[i]=r[1];
+// //             // }
+// //             console.log(v);
+// //            str=str.replace(v,'*');
+// //         })
+// // console.log(str);
+// // 
+// var arr=[];
+// arr['i']={元素:'b' , 次数:4 , 位置:[0,2,5]};
+// arr['j']={元素:'a' , 次数:7 , 位置:[0,2,5]};
+// arr['k']={元素:'c' , 次数:3 , 位置:[0,2,5]};
+//  // var arr=[{元素:'b' , 次数:4 , 位置:[0,2,5]} , {元素:'a' , 次数:7 , 位置:[0,2,5]}, {元素:'c' , 次数:3 , 位置:[0,2,5]}];
+//  arr.sort(function(x,y){
+//     return y.次数-x.次数;
+//  })
+
+
+// //  var test=[];
+// //  var oItem={};
+// //  oItem.元素='item1';
+// //  oItem.次数=3;
+// //  oItem.位置=[];
+// //  oItem.位置.push(9);
+// // test['a']={元素:'a',次数:1,位置:[0]};
+// // test['b']={元素:'b',次数:1,位置:[2]};
+// var test=[{元素:'a',次数:1,位置:[0]} , {元素:'b',次数:1,位置:[2]}];
+// var arrSort=arrN.sort(function (x,y){
+//     return y.次数-x.次数;
+// });
+// var x=0;
+// var oResult={};
+// for(i in arrN){
+//     if(arrN[i].次数 > x){
+//         x=arrN[i].次数;
+//         oResult=arrN[i];
+//     }
+// }
+// console.log(x);
+// var r=oResult.元素+oResult.次数+oResult.位置;
+// document.
+// console.log(oResult.元素+oResult.次数+oResult.位置);
+
+
+// // console.log(brr);
+// // console.log(newArr);
+// // document.write(str)
+    
+//     </script>
+</body>
+</html>
