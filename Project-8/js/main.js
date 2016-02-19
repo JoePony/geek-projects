@@ -1,0 +1,9 @@
+define(['require','main'],function(require){
+    require(['index'],function(fn){
+        fn;
+    });
+});
+define(function(require){
+    require('jquery-1.11.3.min');
+    require('index');
+});

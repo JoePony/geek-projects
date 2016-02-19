@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- 新闻内容页 -->
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <title>百度新闻</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部 -->
+        <header class="clearfix showNews-header">
+            <div class="fl">
+                <a href="javascript:void(0)" class="back" onclick="javascript:window.history.go(-1);" title="返回"></a>
+            </div>
+            <h3>类别？？？</h3>
+        </header>
+        <!-- 导航 -->
+<!--         <nav id="category">
+            <ul class="clearfix">
+                <li id="recommand"><span>推荐</span></li>
+                <li id="baijia"><span>百家</span></li>
+                <li id="local"><span>本地</span></li>
+                <li id="picture"><span>图片</span></li>
+                <li id="entertainment"><span>娱乐</span></li>
+                <li id="society"><span>社会</span></li>
+            </ul>
+            <ul class="clearfix">
+                <li id="military"><span>军事</span></li>
+                <li id="tech"><span>科技</span></li>
+                <li id="internet" class="internet"><span>互联网</span></li>
+                <li id="woman"><span>女人</span></li>
+                <li id="more"><span>人文</span></li>
+            </ul>
+        </nav> -->
+        <nav id="category">
+            <ul class="clearfix">
+                <li id="recommand"><a href="">推荐</a></li>
+                <li id="baijia"><a href="index.php?category=百家">百家</a></li>
+                <li id="local"><a href="">本地</a></li>
+                <li id="picture"><a href="">图片</a></li>
+                <li id="entertainment"><a href="">娱乐</a></li>
+                <li id="society"><a href="">社会</a></li>
+            </ul>
+            <ul class="clearfix">
+                <li id="military"><a href="">军事</a></li>
+                <li id="tech"><a href="">科技</a></li>
+                <li id="internet" class="internet"><a href="">互联网</a></li>
+                <li id="woman"><a href="">女人</a></li>
+                <li id="more"><a href="">人文</a></li>
+            </ul>
+        </nav>
+        <!-- 新闻显示页 -->
+        <div class="show-news">
+            <h2 class="title"></h2>
+            <p class="info">
+                <span class="time"></span>
+                <span class="source"></span>
+            </p>
+            <div class="content"></div>
+            <div class="img">
+                <img src="" alt="">
+            </div>
+        </div>
+        <!-- 底部 -->
+        <footer>
+            <a href=""><span>意见反馈</span></a>
+            <a href=""><span>应用推荐</span></a>
+            <a href=""><span>客户端</span></a>
+        </footer>
+    </div>
+    <script src="js/index.js" type="text/javascript"></script>
+</body>
+</html>
