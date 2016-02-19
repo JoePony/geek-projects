@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <title>登录 - 后台管理系统</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" />
+</head>
+<body>
+    <div class="container container-login">
+        <div class="login-panel img-rounded center-block">
+            <h2 class="headline">
+                <span>后台管理系统</span>
+            </h2>
+            <form action="index.html" method="post">
+                <div class="form-group has-success">
+                    <label class="control-label hidden-xs" for="username">用户名</label>
+                    <input type="text" class="form-control" id="username" placeholder="手机/用户名/邮箱" required="required" />
+                </div>
+                <div class="form-group has-success">
+                    <label class="control-label hidden-xs" for="psw">密码</label>
+                    <input type="password" class="form-control" id="psw" placeholder="输入6~32密码" required="required" />
+                </div>
+                <div class="form-group has-success">
+                    <label class="control-label hidden-xs" for="code">验证码</label>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="password" class="form-control" id="code" placeholder="验证码" required="required" />
+                        </div>
+                        <div class="verify col-md-3">
+                            <img src="./images/verify.gif" alt="验证码" title="看不清，换一张">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox">&nbsp;记住我的登录状态
+                    </label>
+                    &nbsp;|&nbsp;<a href="">忘记密码</a>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="login-btn btn btn-primary btn-block btn-lg center-block" value="登录">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

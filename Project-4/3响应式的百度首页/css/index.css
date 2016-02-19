@@ -1,0 +1,237 @@
+/* 重置样式 start */
+html,body,div,form,input,p,ul,li{
+    margin:0;
+    padding:0;
+    border:0 none;
+}
+a{
+    color:#00C;
+}
+a:hover, input:focus{
+    outline:0 none;
+}
+ul,li{
+    list-style:none outside none;
+}
+/* 重置样式 end */
+
+/* 公共样式 start */
+body{
+    font-family:Arial;
+}
+.fll{
+    float:left;
+}
+.clearfix:after{
+    content:' ';
+    display:block;
+    clear:both;
+    overflow:hidden;
+}
+.wrapper{
+    width:100%;
+    min-width:810px;
+    min-height:600px;
+    _height:600px;
+    position:relative;
+}
+/* 公共样式 end */
+.extra-phone, .phone-top-shortcut{
+    display:none;
+}
+/* 搜索框样式 strat */
+.form_wrap{
+    text-align:center;
+    padding-top:60px;
+}
+.form_wrap .kw_wrap{
+    width:539px;
+    height:34px;
+    display:inline-block;
+    border:1px solid #B8B8B8;
+    border-color:#B8B8B8 transparent #CCCCCC #B8B8B8;
+    _border-right-color:#3385FF;                              /* 兼容IE6 */
+    text-align:left;
+    position:relative;
+    overflow:hidden;
+}
+.form_wrap .kw_wrap_h{
+    border-color:#999 transparent #b3b3b3 #999;
+    _border-right-color:#3385FF;                              /* 兼容IE6 */
+}
+.form_wrap .kw_wrap_c{
+    border-color:#4791ff transparent #4791ff #4791ff;
+    _border-right-color:#3385FF;                              /* 兼容IE6 */
+    box-shadow:1px 0 1px #EEE inset;                        
+    behavior:url(ie-css3.htc);
+}
+.form_wrap form{
+    width:641px;
+    margin:22px auto 0;
+}
+.form_wrap .kw{
+    width:500px;
+    height:22px;
+    margin:6px 0 0 7px;
+    font:16px/18px arial;
+}
+.form_wrap .clear_kw{
+    width:34px;
+    height:30px;
+    display:inline-block;
+    font:30px/34px Arial;
+    background:url(../images/quickdelete.png) center 10px no-repeat;
+    color:#EEE;
+    position:absolute;
+    top:2px;
+    right:0;
+    text-decoration:none;
+    display:none;
+}
+.form_wrap .clear_kw_h, .form_wrap .clear_kw:hover{
+    cursor:pointer;
+    background-position:center -24px;
+}
+.form_wrap .s_btn{
+    width:100px;
+    height:36px;
+    background-color:#3385FF;
+    color:#FFF;
+    font-size:15px;
+    line-height:36px;
+    letter-spacing:1px;
+}
+.form_wrap .s_btn:hover,
+.form_wrap .s_btn_h{                          /* js添加该类，兼容IE6的input:hover的问题 */
+    background-color:#317ef3;
+    box-shadow:1px 1px 1px #CCC;
+    cursor:pointer;
+    behavior:url(ie-css3.htc);
+}
+/* 搜索框样式 end */
+
+/* 顶部导航样式 start */
+nav{
+    position:relative;
+}
+nav .nav_list{
+    position:absolute;
+    right:15px;
+    top:19px;
+}
+nav li{
+    float:left;
+    margin-left:20px;
+}
+nav a{
+    font:bold 13px/24px Arial;
+    color:#333;
+    display:inline-block;
+}
+nav a.thin{
+    font-weight:normal;
+}
+nav a.more{
+    display:inline-block;
+    background-color:#3388FF;
+    line-height:22px;
+    color:#FFF;
+    padding:0 5px;
+    text-decoration:none;
+}
+nav a:hover{
+    color:#00C;
+}
+nav a.more:hover{
+    color:#FFF;
+}
+nav li.setting{
+    position:relative;
+}
+nav .more_setting{
+    width:70px;
+    border:1px solid #D1D1D1;
+    box-shadow:1px 1px 5px #D1D1D1;
+    position:absolute;
+    left:-24px;
+    top:25px;
+}
+nav .more_setting li{
+    margin:0 !important;
+    float:none !important;
+    text-align:center;
+}
+nav .more_setting a{
+    display: block;
+    font:normal 12px/26px Arial;
+    margin: 0 !important;
+    text-decoration: none;
+}
+nav .more_setting a:hover{
+    background-color:#38F;
+    color:#FFF;
+}
+nav .setting .arrow{
+    width:0px;
+    height:0px;
+    display:none;
+}
+nav i, nav em{
+    display:inline-block;
+    width:0;
+    height:0;
+    position:absolute;
+    left:7px;
+    border:5px solid #d8d8d8;
+    border-style:dashed dashed solid;
+    border-top:0 none;
+    border-color:transparent transparent #B8B8B8 transparent;
+    _border-color:#FFF #FFF #000 #FFF;                        /* 针对IE6的透明背景色无效问题 */
+    _font-size:0;                                             /* 针对IE6的双倍高度bug */
+    z-index:1;
+}
+nav i{
+    top:20px;
+    _top:18px;
+    border-bottom-color:#B8B8B8;
+}
+nav em{
+    top:21px;
+    _top:18px;
+    border-bottom-color:#FFF;
+    _border-bottom-color:#D1D1D1;
+}
+nav .setting:hover  .arrow{
+    display:block;
+}
+/* 顶部导航样式 end */
+
+/* 底部样式 strat */
+footer{
+    width:100%;
+    position:absolute;
+    bottom:17px;
+    text-align:center;
+    font-size:12px;
+    line-height:25px;
+    color:#666;
+}
+footer a{
+    margin:0 10px;
+}
+footer i{
+    width:14px;
+    height:17px;
+    display:inline-block;
+    background:url(../images/icons.png) no-repeat 0 0;
+    position:relative;
+    top:3px;
+    _top:0;
+}
+footer p.copyright *{
+    color:#666;
+    margin:0;
+}
+/* 底部样式 end */
+
+/* 全部样式完 */

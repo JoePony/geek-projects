@@ -1,0 +1,818 @@
+/* 重置样式 start */
+html,body,div,h1,h2,h3,a,span,input,img,ul,ol,li,dl,dt,dd,button,em,i,p,strong{
+    margin:0;
+    padding:0;
+    border:0 none;
+    outline:0 none;
+    font-weight:normal;
+    font-style:normal;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+}
+ul,ol,li,dl,dt,dd{
+    list-style:none outside none;
+}
+a{
+    text-decoration:none;
+    color:#333;
+}
+/* 重置样式 end */
+.clearfix:before, .clearfix:after {                 /* 清除浮动 start */
+    content: '.';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    font-size: 0;
+    line-height: 0;
+    width: 0;
+    height: 0;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+.clear{
+    clear:both;
+}                                                   /* 清除浮动 end */
+                                                    /* 公共样式 start */
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+.yahei, body{
+     font-family:"Microsoft Yahei";
+}
+.w1k{
+    width:1000px;
+    margin:0 auto;
+}
+.dis-n{
+    display:none;
+}
+body{
+    font-size:14px;
+}
+                                                    /* 公共样式 end */
+                                                    /* 头部 start */
+header{
+    padding:15px 0 6px;
+}
+header .search-form{
+    margin-left:190px;
+}
+header input{
+    line-height:36px;
+}
+header .kw{
+    width:300px;
+    height:36px;
+    padding:0 12px;
+    border:1px solid #E4E4E4;
+    font-size:12px;
+}
+header .submit{
+    width:38px;
+    height:36px;
+    cursor:pointer;
+    border:1px solid #E4E4E4;
+    border-left:none;
+    background:url(../images/search-btn.png) no-repeat center center;
+}
+header .submit:hover{
+    background:url(../images/search-btn-h.png) no-repeat center center #35B558;
+}
+header .login-shortcut{
+    font-size:12px;
+    line-height:38px;
+}
+header .login-shortcut a{
+    margin:0 12px;
+}
+nav{
+    border-top:2px solid #35B558;
+    box-shadow:0 1px 5px rgba(0, 0, 0, 0.1);
+}
+nav ol li{
+    display:inline-block;    
+    margin-left:20px;
+}
+nav ol a{
+    line-height:44px;
+    font-size:12px;
+    display:inline-block;  
+}
+nav ol img{
+    margin:14px 5px 0 0;
+    float:left;
+}
+nav ul li{
+    display:inline-block;
+    line-height:44px;
+    margin-right:12px;
+}
+nav ul a{
+    padding:0 15px;
+    display:inline-block;
+}
+nav ul a:hover, nav ol a:hover, .wrapper .category-list li a:hover{
+    color:#35B558;
+}
+nav ul li:first-child a{
+    padding:0;
+    margin-right:15px;
+}
+                                                    /* 头部 end */
+.wrapper{
+    margin-top:20px;
+}
+                                                    /* 侧边类目 start */
+.wrapper .category-list{
+    width:210px;
+    height:304px;
+    border:1px solid #E4E4E4;
+    border-top:2px solid #35B558;
+    border-right:none;
+    position:relative;
+    z-index:10;
+}
+.wrapper .category-list li{
+    line-height:37px;
+    border-bottom:1px solid #F5F5F5;
+    padding:0 15px;
+    background:url(../images/more-icon_d39346f.png) no-repeat 186px center;
+    background-size:6px 10px;
+    border-right:1px solid #F5F5F5;
+}
+.wrapper .category-list li:last-child{
+    border-bottom:none;
+}
+.wrapper .category-list .sub{
+    position:absolute;
+    top:-2px;
+    left:210px;
+    width:400px;
+    min-height:305px;
+    border:1px solid #E4E4E4;
+    box-shadow:2px 2px 5px #DDD;
+    border-left:none;
+    padding: 0 10px;
+    background:#FFF;
+    display:none;
+}
+.wrapper .category-list li:hover{
+    border-left:1px solid #35B558;
+    border-right:none;
+    background:none;
+}
+.wrapper .category-list li:hover .sub{
+    display:block;
+}
+.wrapper .category-list dt{
+    line-height:33px;
+    border-bottom:1px solid #F5F5F5;
+    margin-top:5px;
+}
+.wrapper .category-list dd{
+    line-height:30px;
+    display:inline-block;
+    font-size:12px;
+}
+.wrapper .category-list dd+dd:before{
+    content:'|';
+    color:#F5F5F5;
+    margin-right:5px;
+}
+                                                    /* 侧边类目 end */
+                                                    /* 滚动幻灯 start */
+.wrapper .slide{
+    width:570px;
+    height:307px;
+    overflow:hidden;
+    margin-left:10px;
+    position:relative;
+}
+.wrapper .slide img{
+    width:570px;
+    height:307px;
+}
+.wrapper .slide .thumbs{
+    position:absolute;
+    bottom:15px;
+    width:100%;
+    text-align:center;
+}
+.wrapper .slide .thumb{
+    width:39px;
+    height:2px;
+    display:inline-block;
+    background-color:#FFF;
+    box-shadow:0 0 5px #35B558;
+    margin:0 6px;
+    cursor:pointer;
+}
+.wrapper .slide .thumb-curr{
+    background-color:#35B558;
+    box-shadow:0 0 5px 5px #FFF;
+}
+.wrapper .slide-arrow{
+    width:40px;
+    height:50px;
+    display:inline-block;
+    background:url(../images/banner-left_fe0df34.png) no-repeat -11px -5px;
+    position:absolute;
+    top:41%;
+    cursor:pointer;
+    opacity:0;
+}
+.wrapper .prev{
+    left:0;
+}
+.wrapper .next{
+    background:url(../images/banner-right_a0bdd7d.png) no-repeat -9px -5px;
+    right:0;
+}
+.wrapper .has-arrow:hover .slide-arrow{
+    opacity:0.5;
+    transition:all 0.5s ease;
+}
+.wrapper .has-arrow .slide-arrow:hover{
+    opacity:1;
+    transition:all 0s ease;
+}
+                                                    /* 滚动幻灯 end */
+                                                    /* 右侧权益 start */
+.wrapper .lesson-right-show{
+    width:209px;
+    border:1px solid #E4E4E4;
+    border-left:none;
+}
+.wrapper .lesson-right-show a{
+    display:block;
+    padding:20px;
+    height:153px;
+}
+.wrapper .lesson-right-show a:first-child{
+    border-bottom:1px solid #E4E4E4;
+    height:152px;
+}
+.wrapper .lesson-right-show h2{
+    font-size:15px;
+    color:#666;
+}
+.wrapper .lesson-right-show p{
+    color:#35B558;
+    font-size:12px;
+    margin:10px auto 20px;
+}
+.wrapper .lesson-right-show a:last-child p{
+    line-height:1.6;
+    margin:7px auto;
+}
+.wrapper .lesson-right-show span{
+    margin:0 5px;
+}
+.wrapper .lesson-right-show span:first-child{
+    margin:0 5px 0 0;
+}
+.wrapper .lesson-right-show button{
+    cursor:pointer;
+    width:168px;
+    height:34px;
+    background-color:#7BDA95;
+    border:1px solid #7BDA95;
+    color:#FFF;
+    font:14px/14px 'Microsoft Yahei';
+    border-radius:5px;
+}
+.wrapper .lesson-right-show a:nth-child(2) button{
+    background-color:#F3FFF6;
+    color:#35B558;
+}
+.wrapper .lesson-right-show button:hover{
+    background-color:#35B558 !important;
+    color:#FFF !important;
+    transition:all 0.5s ease-in-out;
+}
+                                                    /* 右侧权益 end */
+                                                    /* 推荐课程列表 start */
+.wrapper .recommand-names{
+    margin-top:15px;
+}
+.wrapper .recommand-names li{
+    float:left;
+    cursor:pointer;
+    width:16.66666%;
+    text-align:center;
+    line-height:40px;
+}
+.wrapper .recommand-names li.curr, .wrapper .recommand-names li:hover{
+    background:url(../images/index-sj_cc73747.png) no-repeat center 36px;
+    border-bottom:2px solid #35B558;
+    color:#35B558;
+}
+.wrapper .recommand-list{
+    margin-top:15px;
+    width:1020px;
+}
+.wrapper .recommand-list > li{
+    float:left;
+    width:235px;
+    height:224px;
+    margin:0 20px 20px 0;
+    position:relative;
+    z-index:0;
+}
+.wrapper .recommand-list > li:nth-child(4){
+    margin-right:0;
+}
+.wrapper .recommand-list .lesson-info{
+    padding:10px;
+    width:inherit;
+    border:1px solid #E4E4E4;
+    overflow:hidden;
+    position:relative;
+    z-index:100;
+    background-color:#FFF;
+}
+.wrapper .recommand-list .lesson-info h2{
+    font-size:14px;
+    height:36px;
+    margin-bottom:12px;
+}
+.wrapper .recommand-list > li:hover{
+    transition:all 0.3s ease-in-out;
+    z-index:20;
+}
+.wrapper .recommand-list > li:hover .dis-n{
+    display:block;
+}
+.wrapper .recommand-list > li:hover .lesson-info{
+    height:auto;
+}
+.wrapper .recommand-list .img-wrap{
+    display:block;
+    height:130px;
+    overflow:hidden;
+}
+.wrapper .recommand-list .img-wrap img{
+    width:235px;
+    height:130px;
+}
+.wrapper .recommand-list .cover{
+    display:block;
+    width:100%;
+    height:inherit;
+    background:rgba(0,0,0,0);
+    position:absolute;
+    top:0;
+    left:0;
+}
+.wrapper .recommand-list i{
+    width:50px;
+    height:50px;
+    display:inline-block;
+    background:url(../images/player_icon.png) no-repeat 0 0;
+    background-size:50px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:-25px;
+    margin-left:-25px;
+    opacity:0;
+}
+.wrapper .recommand-list .img-wrap:hover .cover{
+    background:rgba(0,0,0,.5);
+    transition:all 0.5s ease;
+}
+.wrapper .recommand-list .img-wrap:hover i{
+    opacity:1;
+    transition:all 0.5s ease;
+}
+.wrapper .recommand-list p{
+    color:#999;
+    font-size:12px;
+}
+.wrapper .recommand-list dl, .wrapper .recommand-list ol{
+    float:left;
+    color:#555;
+    font-size:12px;
+    line-height:24px;
+}
+.wrapper .recommand-list dt,.wrapper .recommand-list dd{
+    background:url(../images/clok_a413ecf.png) no-repeat 0 center;
+    background-size:14px;
+    padding-left:20px;
+}
+.wrapper .recommand-list dd{
+    background-image:url(../images/tow-ji_ec2b553.png);
+}
+.wrapper .recommand-list em{
+    float:right;
+    color:#555;
+    font-size:12px;
+}
+.wrapper .recommand-list ol{
+    float:right;
+}
+.wrapper .recommand-list ol li:nth-child(2){
+    text-align:right;
+}
+                                                    /* 推荐课程列表 end */
+                                                    /* 公共标题 start */
+.wrapper .public-title{
+    margin:40px 0 10px;
+}
+.wrapper .public-title h2 a{  
+    font-size:18px;
+}
+.wrapper .public-title .more{
+    color:#2D85CA;
+    font-size:12px;
+    margin-top:10px;
+}
+                                                    /* 公共标题 end */
+                                                    /* 实战路径 start */
+.wrapper .practice-list{
+    /*display:-moz-box;
+    display:-webkit-box;
+    display:box;*/
+    width:1000px;
+}
+.wrapper .practice-list li{
+    /*-moz-box-flex:1;
+    -webkit-box-flex:1;
+    box-fex:1;*/
+    width:200px;
+    float:left;
+    border:1px solid #E4E4E4;
+    border-right-color:transparent;
+    text-align:center;
+}
+.wrapper .practice-list li:last-child{
+    border-right:1px solid #E4E4E4;
+}
+.wrapper .practice-list a{
+    display:inline-block;
+    padding:30px 0;
+    width:100%;
+}
+.wrapper .practice-list img{
+    width:70px;
+    height:70px;
+    margin-bottom:24px;
+}
+.wrapper .practice-list h2{
+    font-size:15px;
+    margin-bottom:30px;
+}
+.wrapper .practice-list p{
+    font-size:12px;
+    line-height:20px;
+}
+.wrapper .practice-list button{
+    border: 1px solid #7BDA95;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    font: 14px/14px 'Microsoft Yahei';
+    height: 34px;
+    width: 140px;
+    background-color: #F3FFF6;
+    color: #35B558;
+    margin-top:40px;
+}
+.wrapper .practice-list li:hover{
+    border:1px solid #35B558;
+}
+.wrapper .practice-list li:hover button{
+    background-color:#35B558;
+    transition:all .3s ease;
+    color:#FFF;
+}
+.wrapper .practice-list li:hover+li{
+    border-left-color:transparent;
+}
+                                                    /* 实战路径 end */
+                                                    /* 知识体系 start */
+.wrapper .knowledge-list{
+    border-bottom:1px solid #E4E4E4;
+}
+.wrapper .knowledge-list li{
+    float:left;
+    width:16.66666%;
+    border:1px solid #E4E4E4;
+    border-right:none;
+    border-bottom:none;
+}
+.wrapper .knowledge-list li:nth-child(6n+6){
+    border-right:1px solid #E4E4E4;
+}
+.wrapper .knowledge-list h2{
+    font-size:15px;
+    margin-bottom:5px;
+}
+.wrapper .knowledge-list h3{
+    font-size:14px;
+    color:#35B558;
+}
+.wrapper .knowledge-list a{
+    width:100%;
+    height:167px;
+    display:block;
+    text-align:center;
+    -moz-transform-style:preserve-3d;
+    -webkit-transform-style:preserve-3d;
+    transform-style:preserve-3d;
+}
+.wrapper .knowledge-list .f-b{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:inherit;
+    padding:45px 0 0;
+    backface-visibility:hidden;
+    transition:all 0.7s ease;
+}
+.wrapper .knowledge-list .f-b img{
+    width:40px;
+    height:40px;
+}
+.wrapper .knowledge-list .back{
+    padding-top:52px;
+    transform:rotateY(-180deg);
+    backface-visibility:hidden;
+    background-color:#F5F5F5;
+}
+.wrapper .knowledge-list p{
+    margin-bottom:10px;
+}
+.wrapper .knowledge-list button{
+    background-color:#66D178;
+    height:36px;
+    width:140px;
+    color:#FFF;
+    font-size:16px;
+    font-family:"Microsoft Yahei";
+    border-radius:5px;
+    cursor:pointer;
+}
+.wrapper .knowledge-list button:hover{
+    background-color:#7BDA95 !important;
+    transition:all 0.5s ease-in-out;
+}
+.wrapper .knowledge-list a:hover .front{
+    -moz-transform:rotateY(180deg);
+    -webkit-transform:rotateY(180deg);
+    transform:rotateY(180deg);
+}
+.wrapper .knowledge-list a:hover .back{
+    -moz-transform:rotateY(0deg);
+    -webkit-transform:rotateY(0deg);
+    transform:rotateY(0deg);
+}
+.wrapper .knowledge-list .off .front{
+    -moz-transform:rotateY(360deg);
+    -webkit-transform:rotateY(360deg);
+    transfrom:rotateY(360deg);
+}
+.wrapper .knowledge-list .off .back{
+    -moz-transform:rotateY(-180deg);
+    -webkit-transform:rotateY(-180deg);
+    transfrom:rotateY(-180deg);
+}
+                                                    /* 实战路径 end */
+                                                    /* 战略合作企业&合作院校&媒体报道 start */
+ .wrapper .partner{
+    padding:20px;
+    border:1px solid #DDD;
+    position:relative;
+}
+.wrapper .partner li{
+    width:16.66666%;
+    text-align:center;
+}
+.wrapper .partner img{
+    width:150px;
+    height:50px;
+    border:1px solid #DDD;
+}
+.wrapper .partner .slide-arrow{
+    top:20px;
+}
+.wrapper .partner-school li{
+    width:14.2857%;
+}
+.wrapper .partner-school img{
+    width:110px;
+    height:110px;
+    border:none;
+}
+.wrapper .partner-school .slide-arrow{
+    top:48px;
+}
+                                                    /* 战略合作企业&合作院校&媒体报道 end */
+                                                    /* footer start */
+footer{
+    margin-top:50px;
+    background-color:#FAFAFA;
+    border-top:1px solid #E4E4E4;
+    border-bottom:1px solid #E4E4E4;
+    padding:20px 0;
+}
+footer .footer-inner dl{
+    float:left;
+    padding-left:30px;
+    width:185px;
+    min-height:180px;
+}
+footer .footer-inner > *{
+    border-left:1px solid #E4E4E4;
+}
+footer .footer-inner dl a{
+    font-size:14px;
+    color:gray;
+}
+footer .footer-inner dl a:hover{
+    color:#35B558;
+}
+footer .footer-inner dd{
+    font-size:12px;
+    margin-top:10px;
+}
+footer .footer-inner dd a{
+    font-size:12px;
+}
+footer .footer-inner dd a:before{
+    content:'·';
+    margin:0 5px 0 2px;
+}
+footer .share-shortcut h2{
+    font-size:15px;
+    color:#35B558;
+}
+footer .app-download{
+    margin:15px 0 10px;
+    display:block;
+}
+footer .app-download img{
+    width:21px;
+    margin-right:15px;    
+}
+footer .app-download strong{
+    font-size:18px;
+}
+footer .app-download:hover strong{
+    color:#35B558;
+}
+footer .share-list{
+    margin:15px 0;
+}
+footer .share-list a{
+    background:url(../images/icons.png) -23px 0;
+    width:32px;
+    height:32px;
+    display:inline-block;
+    margin-right:10px;
+}
+footer .share-list li:nth-child(2) a{
+    background-position:-145px 0;
+}
+footer .share-list li:nth-child(3) a{
+    background-position:-23px -82px;
+    position:relative;
+}
+footer .share-list li:nth-child(3) img{
+    position:absolute;
+    top:-160px;
+    left:-47px;
+    display:none;
+}
+footer .share-list li:nth-child(1) a:hover{
+    background-position:-23px -40px;
+}
+footer .share-list li:nth-child(2) a:hover{
+    background-position:-145px -40px;
+}
+footer .share-list li:nth-child(3) a:hover img{
+    display:block;
+}
+footer .contract h3{
+    font-size:14px;
+    line-height:1.8em;
+}
+footer .contract p{
+    font-size:12px;
+    color:#555;
+}
+footer .share-shortcut{
+    padding:0 0 0 40px;
+    width:260px;
+}
+                                                    /* footer end */
+                                                    /* 底部版权 start */
+.bottom-copyright{
+    padding:20px;
+}
+.bottom-copyright, .bottom-copyright *{
+    font-size:12px;
+    text-align:center;
+    color:#999;
+}
+                                                    /* 底部版权 end */
+                                                    /* 右侧漂浮广告&客服 start */
+.float-ad{
+    position:fixed;
+    top:60px;
+    right:10px;
+    width:105px;
+}
+.float-ad .ad-wrap{
+    margin-top:20px;
+    position:relative;
+}
+.float-ad .ad-wrap a{
+    display:inline-block;
+}
+.float-ad .ad-wrap img{
+    width:105px;
+}
+.float-ad .ad-wrap span{
+    position:absolute;
+    right:-10px;
+    top:2px;
+    line-height:0;
+    cursor:pointer;
+}
+.float-shortcuts{
+    margin-top:30px;
+}
+.float-shortcuts > *{
+    display:block;
+    width:34px;
+    height:34px;
+    background:url(../images/float-shortcut.jpg) no-repeat 0 0;
+    cursor:pointer;
+    position:relative;
+    z-index:999;
+}
+.float-shortcuts .gotop:hover{
+    background-position:right 0;
+}
+.float-shortcuts .app{
+    background-position:0 -34px;
+}
+.float-shortcuts .app img{
+    width:126px;
+    position:absolute;
+    right:34px;
+    top:-70px;
+    display:none;
+}
+.float-shortcuts .app:hover{
+    background-position:right -34px;
+}
+.float-shortcuts .app:hover img{
+    display:inline-block;
+}
+.float-shortcuts .investigation{
+    background-position:0 -68px;
+}
+.float-shortcuts .investigation:hover{
+    background-position:right -68px;
+}  
+.float-shortcuts .qq-online{
+    background-position:center bottom;
+}
+.float-shortcuts .qq-online span{
+    position:absolute;
+    right:40px;
+    top:4px;
+    width:180px;
+    padding:6px 0;
+    background-color:#F7F7F7;
+    text-align:center;
+    font-size:12px;
+    border-radius:0 5px 5px 0;
+    display:none;
+}
+.float-shortcuts .qq-online i{
+    position:absolute;
+    top:17px;
+    right:34px;
+    width:0;
+    height:0;
+    border:10px solid #F00;
+    border-color:transparent transparent transparent #F7F7F7;
+    border-style:dashed dashed dashed solid;
+    border-right:none;
+    display:none;
+}
+.float-shortcuts .qq-online:hover *{
+    display:inline-block;
+}
+                                                    /* 右侧漂浮广告&客服 end */

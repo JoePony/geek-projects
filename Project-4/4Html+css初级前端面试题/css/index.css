@@ -1,0 +1,81 @@
+/* 重置样式strat */
+html,body{
+    font-family:"Microsoft Yahei";
+}
+h3{
+    font-size:18px;                                        /* 重置bootstrap样式 */
+    margin-top:10px;
+}
+p{
+    margin:0;
+}
+div,p{                                                     /* 重置bootstrap样式 */
+    cursor:default;
+}
+/* 重置样式end */
+/* 页面样式strat */
+body{
+    background:url(../images/bg.jpg) no-repeat fixed center -100px;
+}
+.container h1{
+    color:#05F;
+}
+.container h1 sub{ 
+    font-size:0.5em;
+    color:#333;
+}
+.question-list{
+    margin-bottom:40px;
+}
+.question-list .my, .question-list .answer{
+    margin:8px 0 15px;
+}
+.question-list .answer-wrapper{
+    position:fixed;
+    top:10%;
+    left:50%;
+    background-color:#FFF;
+    width:70%;
+    padding:20px 30px;
+    margin-left:-35%;
+    box-shadow:0 0 10px 10px #AAA;
+    border-radius:5px;
+    display:none;                                         /* 回答先隐藏，点击题目时显示 */
+}
+.question-list .answer-wrapper-v{
+    display:block;
+}
+.question-list .answer-inner{
+    max-height:500px;
+    overflow-y:auto;
+}
+.question-list .answer-wrapper .close{
+    font-size:20px;
+    position:absolute;
+    top:0;
+    right:5px;
+    opacity:0.1;
+}
+.question-list .answer-wrapper .close span{
+    font-size:30px;
+}
+.question-list .answer-wrapper:hover .close{
+    opacity:0.2;
+    transtion:all 0.5s ease;
+}
+.question-list .answer-wrapper .close:hover, .question-list .answer-wrapper .close:focus{
+    opacity:0.5;
+}
+.question-list li{
+    padding:10px;
+    border-bottom:1px dotted #AAA;
+    cursor:pointer;
+}
+.question-list li > h3:hover{
+    text-decoration:underline;
+    color:#F60;
+}
+.question-list mark{
+    margin-bottom:5px;
+}
+/* 页面样式end */
