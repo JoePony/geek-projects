@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+    <link rel="stylesheet" href="css/index.css" type="text/css" />  
+    <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <title>百度一下，你就知道</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+    <!-- 顶部快捷工具 -->
+    <div class="top-shortcut clearfix">
+        <div class="weather clearfix fl">
+            <iframe width="226" scrolling="no" height="25" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=34&icon=1&num=3" class="fl"></iframe>
+            <span class="vertical-gap fl">|</span>
+            <ul class="primary-list clearfix fl">
+                <li><a href="">宝箱</a></li>
+                <li><a href="">换肤</a></li>
+                <li><a href="">消息</a></li>
+            </ul>
+        </div>
+        <div class="top-nav fr">
+            <ul class="primary-list clearfix">
+                <li><a href="">糯米</a></li>
+                <li><a href="">新闻</a></li>
+                <li><a href="">hao123</a></li>
+                <li><a href="">地图</a></li>
+                <li><a href="">视频</a></li>
+                <li><a href="">贴吧</a></li>
+                <li class="normal user has-sub">
+                    <a href="http://i.baidu.com/" target="_blank">ThinkMan</a>
+                    <div class="sub-wrap">
+                        <span class="arrow">
+                            <i></i>
+                        </span>
+                        <ul>
+                            <li><a href="">我的VIP</a></li>
+                            <li><a href="">个人中心</a></li>
+                            <li><a href="">账号设置</a></li>
+                            <li><a href="">意见反馈</a></li>
+                            <li><a href="">退出</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="normal setting has-sub">
+                    <a href="javascript:void(0);">设置</a>
+                    <div class="sub-wrap">
+                        <span class="arrow">
+                         <i></i>
+                        </span>
+                        <ul>
+                            <li><a href="">搜索设置</a></li>
+                            <li><a href="">高级搜索</a></li>
+                            <li><a href="">关闭预测</a></li>
+                            <li><a href="">搜索历史</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="normal more" id="more-porducts">
+                    <a href="">更多产品</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 主体 -->
+    <div class="main">
+        <!-- logo、搜索框 -->
+        <div class="logo-wrap">
+            <img src="images/logo.png?__inline" width="272" height="129" alt="百度logo" />
+            <form action="" method="" class="clearfix">
+                <span class="fl">
+                    <input type="text" class="kw" name="kw" id="kw" autofocus="autofocus" autocomplete="off" />
+                </span>
+                <span class="fl">
+                    <input type="submit" class="submit" value="百度一下" />
+                </span>
+            </form>
+        </div>
+        <!-- 搜索框下的主体 -->
+        <div class="myMain">
+            <!-- 切换导航 -->
+            <ul class="menu-list clearfix" id="menu-list">
+                <li class="menu-item-curr">推荐</li>
+                <li>导航</li>
+            </ul>
+            <div class="main-items" id="scroll-wrap">
+                <!-- 新闻推荐 -->
+                <div class="news clearfix scroll-item-curr">
+                    <div class="left fl">
+                        <div class="news-wrap">
+                            <!-- 新闻轮播图 -->
+                            <div class="newPic-wrap">
+                                <ul class="newPic-list" id="newPic-list">
+                                    <li class="curr"><a href="" title="澳洲树蛙头顶小蜗牛似法式贝雷帽"><img src="images/temp/newsPic1.jpg" width="538" height="330" alt="澳洲树蛙头顶小蜗牛似法式贝雷帽"></a></li>
+                                    <li><a href="" title="世界“造型最酷”海岛"><img src="images/temp/newsPic2.jpg" width="538" height="330" alt="世界“造型最酷”海岛"></a></li>
+                                    <li><a href="" title="习近平携夫人彭丽媛抵达河内"><img src="images/temp/newsPic3.jpg" width="538" height="330" alt="习近平携夫人彭丽媛抵达河内"></a></li>
+                                    <li><a href="" title="用脸堵炮筒 看熊孩子如何玩转世界"><img src="images/temp/newsPic4.jpg" width="538" height="330" alt="用脸堵炮筒 看熊孩子如何玩转世界"></a></li>
+                                    <li><a href="非洲母狮与动物保护者温暖相拥" title=""><img src="images/temp/newsPic5.jpg" width="538" height="330" alt="非洲母狮与动物保护者温暖相拥"></a></li>
+                                    <li><a href="" title=""><img src="images/temp/newsPic6.jpg" width="538" height="330" alt="美国“树坚强”走红网络">美国“树坚强”走红网络</a></li>
+                                </ul>
+                                <div class="mask-bg"></div>
+                                <ol id="news-titles">
+                                    <li class="curr"><a href="">澳洲树蛙头顶小蜗牛似法式贝雷帽</a></li>
+                                    <li><a href="">世界“造型最酷”海岛</a></li>
+                                    <li><a href="">习近平携夫人彭丽媛抵达河内</a></li>
+                                    <li><a href="">用脸堵炮筒 看熊孩子如何玩转世界</a></li>
+                                    <li><a href="">非洲母狮与动物保护者温暖相拥</a></li>
+                                    <li><a href="">美国“树坚强”走红网络</a></li>
+                                </ol>
+                            </div>
+                            <ul class="thumbs clearfix" id="news-thumbs">
+                                <li class="curr"><img src="images/temp/newsPic1.jpg" width="72" height="44" alt="澳洲树蛙头顶小蜗牛似法式贝雷帽"></li>
+                                <li><img src="images/temp/newsPic2.jpg" width="72" height="44" alt="世界“造型最酷”海岛"></li>
+                                <li><img src="images/temp/newsPic3.jpg" width="72" height="44" alt="习近平携夫人彭丽媛抵达河内"></li>
+                                <li><img src="images/temp/newsPic4.jpg" width="72" height="44" alt="用脸堵炮筒 看熊孩子如何玩转世界"></li>
+                                <li><img src="images/temp/newsPic5.jpg" width="72" height="44" alt="非洲母狮与动物保护者温暖相拥"></li>
+                                <li><img src="images/temp/newsPic6.jpg" width="72" height="44" alt="美国“树坚强”走红网络"></li>
+                            </ul>
+                        </div>
+                        <p class="news-tip"><span>以下信息根据您的兴趣推荐</span></p>
+                        <ul class="headline-list">
+                            <li>
+                                <h2>
+                                    <span class="hot"></span>
+                                    <a href="" class="headline-title">
+                                        北京降今冬首场雪 雨雪天气将持续
+                                    </a>
+                                </h2>
+                                <ul class="pic-list clearfix">
+                                    <li class="fl">
+                                        <a href=""><img src="images/temp/headline1.jpeg" alt="北京降今冬首场雪 雨雪天气将持续"></a>
+                                    </li>
+                                    <li class="fl">
+                                        <a href=""><img src="images/temp/headline1.jpeg" alt="北京降今冬首场雪 雨雪天气将持续"></a>
+                                    </li>
+                                </ul>
+                                <p class="source">
+                                    <a href="" class="from" target="_blank">央广网</a><span class="time">11-06 06:52</span>
+                                </p>
+                                <span class="uninterested" id="dustBin">
+                                    <span class="tips">
+                                        不敢兴趣
+                                        <em></em><i></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <h2>
+                                    <a href="" class="headline-title">
+                                        涉内地游客香港死亡事件珠宝店负责人被拘捕
+                                    </a>
+                                </h2>
+                                <p class="source">
+                                    <a href="" class="from" target="_blank">搜狐新闻</a><span class="time">11-06 06:52</span>
+                                </p>
+                                <span class="uninterested">
+                                    <span class="tips">
+                                        不敢兴趣
+                                        <em></em><i></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <h2>
+                                    <a href="" class="headline-title">
+                                        美国“树坚强”走红网络 无视重力法则
+                                    </a>
+                                </h2>
+                                <ul class="pic-list clearfix">
+                                    <li class="fl">
+                                        <a href=""><img src="images/temp/headline2-1.jpeg" alt="美国“树坚强”走红网络 无视重力法则"></a>
+                                    </li>
+                                    <li class="fl">
+                                        <a href=""><img src="images/temp/headline2-2.jpeg" alt="美国“树坚强”走红网络 无视重力法则"></a>
+                                    </li>
+                                    <li class="fl">
+                                        <a href=""><img src="images/temp/headline2-3.jpeg" alt="美国“树坚强”走红网络 无视重力法则"></a>
+                                    </li>
+                                </ul>
+                                <p class="source">
+                                    <a href="" class="from" target="_blank">央广网</a><span class="time">11-06 06:52</span>
+                                </p>
+                                <span class="uninterested">
+                                    <span class="tips">
+                                        不敢兴趣
+                                        <em></em><i></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <h2>
+                                    <span class="hot"></span>
+                                    <a href="" class="headline-title">
+                                        河南村民打井挖出万年溶洞 神似地下宫殿
+                                    </a>
+                                </h2>
+                                <ul class="pic-list clearfix">
+                                    <li class="fl">
+                                        <a href=""><img src="images/temp/headline3.jpeg" alt="河南村民打井挖出万年溶洞 神似地下宫殿"></a>
+                                    </li>
+                                </ul>
+                                <p class="source">
+                                    <a href="" class="from" target="_blank">央广网</a><span class="time">11-06 06:52</span>
+                                </p>
+                                <span class="uninterested">
+                                    <span class="tips">
+                                        不敢兴趣
+                                        <em></em><i></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <h2>
+                                    <span class="hot"></span>
+                                    <a href="" class="headline-title">
+                                        北大向交通部提十点建议 将专车定名为网络约租车
+                                    </a>
+                                </h2>
+                                <p class="source">
+                                    <a href="" class="from" target="_blank">央广网</a><span class="time">11-06 06:52</span>
+                                </p>
+                                <span class="uninterested">
+                                    <span class="tips">
+                                        不敢兴趣
+                                        <em></em><i></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <h2>
+                                    <span class="hot"></span>
+                                    <a href="" class="headline-title">
+                                        北京降今冬首场雪 雨雪天气将持续
+                                    </a>
+                                </h2>
+                                <ul class="pic-list clearfix">
+                                    <li class="fl">
+                                        <a href=""><img src="images/temp/headline1.jpeg" alt="北京降今冬首场雪 雨雪天气将持续"></a>
+                                    </li>
+                                    <li class="fl">
+                                        <a href=""><img src="images/temp/headline1.jpeg" alt="北京降今冬首场雪 雨雪天气将持续"></a>
+                                    </li>
+                                </ul>
+                                <p class="source">
+                                    <a href="" class="from" target="_blank">央广网</a><span class="time">11-06 06:52</span>
+                                </p>
+                                <span class="uninterested">
+                                    <span class="tips">
+                                        不敢兴趣
+                                        <em></em><i></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <h2>
+                                    <a href="" class="headline-title">
+                                        涉内地游客香港死亡事件珠宝店负责人被拘捕
+                                    </a>
+                                </h2>
+                                <p class="source">
+                                    <a href="" class="from" target="_blank">搜狐新闻</a><span class="time">11-06 06:52</span>
+                                </p>
+                                <span class="uninterested">
+                                    <span class="tips">
+                                        不敢兴趣
+                                        <em></em><i></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <h2>
+                                    <a href="" class="headline-title">
+                                        美国“树坚强”走红网络 无视重力法则
+                                    </a>
+                                </h2>
+                                <ul class="pic-list clearfix">
+                                    <li class="fl">
+                                        <a href=""><img src="images/temp/headline2-1.jpeg" alt="美国“树坚强”走红网络 无视重力法则"></a>
+                                    </li>
+                                    <li class="fl">
+                                        <a href=""><img src="images/temp/headline2-2.jpeg" alt="美国“树坚强”走红网络 无视重力法则"></a>
+                                    </li>
+                                    <li class="fl">
+                                        <a href=""><img src="images/temp/headline2-3.jpeg" alt="美国“树坚强”走红网络 无视重力法则"></a>
+                                    </li>
+                                </ul>
+                                <p class="source">
+                                    <a href="" class="from" target="_blank">央广网</a><span class="time">11-06 06:52</span>
+                                </p>
+                                <span class="uninterested">
+                                    <span class="tips">
+                                        不敢兴趣
+                                        <em></em><i></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <h2>
+                                    <span class="hot"></span>
+                                    <a href="" class="headline-title">
+                                        河南村民打井挖出万年溶洞 神似地下宫殿
+                                    </a>
+                                </h2>
+                                <ul class="pic-list clearfix">
+                                    <li class="fl">
+                                        <a href=""><img src="images/temp/headline3.jpeg" alt="河南村民打井挖出万年溶洞 神似地下宫殿"></a>
+                                    </li>
+                                </ul>
+                                <p class="source">
+                                    <a href="" class="from" target="_blank">央广网</a><span class="time">11-06 06:52</span>
+                                </p>
+                                <span class="uninterested">
+                                    <span class="tips">
+                                        不敢兴趣
+                                        <em></em><i></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <h2>
+                                    <span class="hot"></span>
+                                    <a href="" class="headline-title">
+                                        北大向交通部提十点建议 将专车定名为网络约租车
+                                    </a>
+                                </h2>
+                                <p class="source">
+                                    <a href="" class="from" target="_blank">央广网</a><span class="time">11-06 06:52</span>
+                                </p>
+                                <span class="uninterested">
+                                    <span class="tips">
+                                        不敢兴趣
+                                        <em></em><i></i>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <h2>
+                                    <a href="" class="headline-title">
+                                        美国“树坚强”走红网络 无视重力法则
+                                    </a>
+                                </h2>
+                                <ul class="pic-list clearfix">
+                                    <li class="fl">
+                                        <a href=""><img src="images/temp/headline2-1.jpeg" alt="美国“树坚强”走红网络 无视重力法则"></a>
+                                    </li>
+                                    <li class="fl">
+                                        <a href=""><img src="images/temp/headline2-2.jpeg" alt="美国“树坚强”走红网络 无视重力法则"></a>
+                                    </li>
+                                    <li class="fl">
+                                        <a href=""><img src="images/temp/headline2-3.jpeg" alt="美国“树坚强”走红网络 无视重力法则"></a>
+                                    </li>
+                                </ul>
+                                <p class="source">
+                                    <a href="" class="from" target="_blank">央广网</a><span class="time">11-06 06:52</span>
+                                </p>
+                                <span class="uninterested">
+                                    <span class="tips">
+                                        不敢兴趣
+                                        <em></em><i></i>
+                                    </span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="latest-news fr" id="latest-news">
+                        <p class="tag clearfix">
+                            <strong class="fl"><a href="">实时热点</a></strong>
+                            <a class="fr" id="refresh"><i id="refresh-rotate"></i>换一换</a>
+                        </p> 
+                        <ul class="clearfix curr">
+                            <li><a href="">北京算命一条街</a></li>
+                            <li><a href="">因手机被暂扣手机被暂扣跳楼坠</a></li>
+                            <li><a href="">毁货机救出婴儿</a></li>
+                            <li><a href="">老人小楷抄红楼梦</a></li>
+                            <li><a href="">女中学生称遭体罚</a></li>
+                            <li><a href="">食堂女神走红</a></li>
+                            <li><a href="">男子跷二郎腿被打</a></li>
+                            <li><a href="">朱桢晒婚纱照</a></li>
+                            <li><a href="">小学现奇葩数学题</a></li>
+                            <li><a href="">农民工伪装富二代</a></li>
+                            <li><a href="">王俊凯深夜自拍</a></li>
+                            <li><a href="">啦啦队宣传照走红</a></li>
+                            <li><a href="">彭于晏告白舒淇</a></li>
+                            <li><a href="">探望母亲按次收费</a></li>
+                            <li><a href="">陈道明批娱乐综艺</a></li>
+                            <li><a href="">农村越南新娘出逃</a></li>
+                        </ul>
+                        <ul class="clearfix">
+                            <li><a href="">朱桢晒婚纱照</a></li>
+                            <li><a href="">北京算命一条街</a></li>
+                            <li><a href="">毁货机救出婴儿</a></li>
+                            <li><a href="">农村越南新娘出逃</a></li>
+                            <li><a href="">因手机被暂扣手机被暂扣跳楼坠</a></li>
+                            <li><a href="">老人小楷抄红楼梦</a></li>
+                            <li><a href="">探望母亲按次收费</a></li>
+                            <li><a href="">男子跷二郎腿被打</a></li>
+                            <li><a href="">王俊凯深夜自拍</a></li>
+                            <li><a href="">女中学生称遭体罚</a></li>
+                            <li><a href="">食堂女神走红</a></li>
+                            <li><a href="">陈道明批娱乐综艺</a></li>
+                            <li><a href="">小学现奇葩数学题</a></li>
+                            <li><a href="">农民工伪装富二代</a></li>
+                            <li><a href="">啦啦队宣传照走红</a></li>
+                            <li><a href="">彭于晏告白舒淇</a></li>
+                            <li><a href="">老人小楷抄红楼梦</a></li>
+                        </ul>
+                        <ul class="clearfix">
+                            <li><a href="">啦啦队宣传照走红</a></li>
+                            <li><a href="">彭于晏告白舒淇</a></li>
+                            <li><a href="">毁货机救出婴儿</a></li>
+                            <li><a href="">北京算命一条街</a></li>
+                            <li><a href="">农村越南新娘出逃</a></li>
+                            <li><a href="">老人小楷抄红楼梦</a></li>
+                            <li><a href="">食堂女神走红</a></li>
+                            <li><a href="">男子跷二郎腿被打</a></li>
+                            <li><a href="">因手机被暂扣手机被暂扣跳楼坠</a></li>
+                            <li><a href="">王俊凯深夜自拍</a></li>
+                            <li><a href="">探望母亲按次收费</a></li>
+                            <li><a href="">女中学生称遭体罚</a></li>
+                            <li><a href="">小学现奇葩数学题</a></li>
+                            <li><a href="">陈道明批娱乐综艺</a></li>
+                            <li><a href="">农民工伪装富二代</a></li>
+                            <li><a href="">朱桢晒婚纱照</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 网站导航 -->
+                <div class="navigates">
+                    <ul class="navigates-list clearfix">
+                        <li>
+                            <a href="" title="百度糯米" target="_blank">
+                                <img src="images/temp/navigate1-1.png" class="logo" alt="百度糯米" />
+                            </a>
+                            <img src="images/fan.png" alt="返" class="fan dis-n" />
+                            <p class="dis-n"><a href="" title="百度糯米" target="_blank">最高返利80.00%</a></p>
+                        </li>
+                        <li>
+                            <a href="" title="百度糯米" target="_blank">
+                                <img src="images/temp/navigate1-2.png" class="logo" alt="百度糯米" />
+                            </a>
+                            <img src="images/fan.png" alt="返" class="fan dis-n" />
+                            <p class="dis-n"><a href="" title="百度糯米" target="_blank">最高返利80.00%</a></p>
+                        </li>
+                        <li>
+                            <a href="" title="百度糯米" target="_blank">
+                                <img src="images/temp/navigate1-1.png" class="logo" alt="百度糯米" />
+                            </a>
+                            <img src="images/fan.png" alt="返" class="fan dis-n" />
+                            <p class="dis-n"><a href="" title="百度糯米" target="_blank">最高返利80.00%</a></p>
+                        </li>
+                        <li>
+                            <a href="" title="百度糯米" target="_blank">
+                                <img src="images/temp/navigate1-2.png" class="logo" alt="百度糯米" />
+                            </a>
+                            <img src="images/fan.png" alt="返" class="fan dis-n" />
+                            <p class="dis-n"><a href="" title="百度糯米" target="_blank">最高返利80.00%</a></p>
+                        </li>
+                        <li>
+                            <a href="" title="百度糯米" target="_blank">
+                                <img src="images/temp/navigate1-1.png" class="logo" alt="百度糯米" />
+                            </a>
+                            <img src="images/fan.png" alt="返" class="fan dis-n" />
+                            <p class="dis-n"><a href="" title="百度糯米" target="_blank">最高返利80.00%</a></p>
+                        </li>
+                        <li>
+                            <a href="" title="百度糯米" target="_blank">
+                                <img src="images/temp/navigate1-2.png" class="logo" alt="百度糯米" />
+                            </a>
+                            <img src="images/fan.png" alt="返" class="fan dis-n" />
+                            <p class="dis-n"><a href="" title="百度糯米" target="_blank">最高返利80.00%</a></p>
+                        </li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-1.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-2.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-1.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-2.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-1.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-2.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-1.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-2.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-1.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-2.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-1.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-2.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-1.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-2.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-1.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-2.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-1.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-2.png" alt="1号店"></a></li>
+                    </ul>
+                    <h1>资讯信息</h1>
+                    <ul class="navigates-list clearfix">
+                        <li>
+                            <a href="" title="百度糯米" target="_blank">
+                                <img src="images/temp/navigate1-1.png" class="logo" alt="百度糯米" />
+                            </a>
+                            <img src="images/fan.png" alt="返" class="fan dis-n" />
+                            <p class="dis-n"><a href="" title="百度糯米" target="_blank">最高返利80.00%</a></p>
+                        </li>
+                        <li>
+                            <a href="" title="百度糯米" target="_blank">
+                                <img src="images/temp/navigate1-2.png" class="logo" alt="百度糯米" />
+                            </a>
+                            <img src="images/fan.png" alt="返" class="fan dis-n" />
+                            <p class="dis-n"><a href="" title="百度糯米" target="_blank">最高返利80.00%</a></p>
+                        </li>
+                        <li>
+                            <a href="" title="百度糯米" target="_blank">
+                                <img src="images/temp/navigate1-1.png" class="logo" alt="百度糯米" />
+                            </a>
+                            <img src="images/fan.png" alt="返" class="fan dis-n" />
+                            <p class="dis-n"><a href="" title="百度糯米" target="_blank">最高返利80.00%</a></p>
+                        </li>
+                        <li>
+                            <a href="" title="百度糯米" target="_blank">
+                                <img src="images/temp/navigate1-2.png" class="logo" alt="百度糯米" />
+                            </a>
+                            <img src="images/fan.png" alt="返" class="fan dis-n" />
+                            <p class="dis-n"><a href="" title="百度糯米" target="_blank">最高返利80.00%</a></p>
+                        </li>
+                        <li>
+                            <a href="" title="百度糯米" target="_blank">
+                                <img src="images/temp/navigate1-1.png" class="logo" alt="百度糯米" />
+                            </a>
+                            <img src="images/fan.png" alt="返" class="fan dis-n" />
+                            <p class="dis-n"><a href="" title="百度糯米" target="_blank">最高返利80.00%</a></p>
+                        </li>
+                        <li>
+                            <a href="" title="百度糯米" target="_blank">
+                                <img src="images/temp/navigate1-2.png" class="logo" alt="百度糯米" />
+                            </a>
+                            <img src="images/fan.png" alt="返" class="fan dis-n" />
+                            <p class="dis-n"><a href="" title="百度糯米" target="_blank">最高返利80.00%</a></p>
+                        </li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-1.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-2.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-1.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-2.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-1.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-2.png" alt="1号店"></a></li>
+                    </ul>
+                    <h1>购物海淘</h1>
+                    <ul class="navigates-list clearfix">
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-1.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-2.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-1.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-2.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-1.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-2.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-1.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-2.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-1.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-2.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-1.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-2.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-1.png" alt="1号店"></a></li>
+                        <li><a href="" title="1号店" target="_blank"><img src="images/temp/navigate1-2.png" alt="1号店"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="footer">
+        <a href="http://www.baidu.com/cache/sethelp/index.html" target="_blank">设为首页</a> 
+        <span>&copy;2015</span> 
+        <a href="http://www.baidu.com/duty" target="_blank">使用百度前必读</a>  
+        <a href="http://jianyi.baidu.com" target="_blank">意见反馈</a> 
+        <span>
+            京ICP证030173号
+            <img src="images/footer-icon.png?__inline" width="13" height="16">
+        </span>
+    </div>
+    <!-- 右侧更多产品 -->
+    <div class="more-products-aside" id="more-products-aside">
+        <div>更多产品</div>      
+        <ul class="more-products-list">
+            <li>
+                <a href="">音乐</a>
+            </li>
+            <li>
+                <a href="">图片</a>
+            </li>
+            <li>
+                <a href="">知道</a>
+            </li>
+            <li>
+                <a href="">文库</a>
+            </li>
+            <li>
+                <a href="">风云榜</a>
+            </li>
+            <li>
+                <a href="">百度推广</a>
+            </li>
+            <li>
+                <a href="">更多产品&gt;&gt;</a>
+            </li>
+        </ul>
+    </div>
+    <!-- 返回顶部 -->
+    <div class="top" id="top"><div>返回顶部</div></div>
+    <!-- 模块化加载 -->     
+    <script src="js/index.js" type="text/javascript"></script>
+</body>
+</html>
