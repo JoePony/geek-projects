@@ -1,0 +1,28 @@
+#game_div, p {
+  width: 400px;
+  margin: auto;
+  margin-top: 20px;
+  position:relative;
+}
+.start{
+  width:100px;
+  font:20px/2em "Microsoft Yahei";
+  text-align:center;
+  background-color:#F50;
+  color:#FFF;
+  border-radius:5px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  -webkit-transform:translate(-50%,-50%);
+      -ms-transform:translate(-50%,-50%);
+          transform:translate(-50%,-50%);
+}
+.start:hover{
+  cursor:pointer;
+  background-color:#F00;
+}
+.tips{
+  text-align:center;
+  color:#999;
+}
